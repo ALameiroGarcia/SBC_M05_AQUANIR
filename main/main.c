@@ -12,6 +12,7 @@
 #include "esp_event.h"
 #include "nvs_flash.h"
 #include "esp_netif.h"
+
 #define I2C_MASTER_SCL_IO 22          // GPIO para SCL
 #define I2C_MASTER_SDA_IO 21          // GPIO para SDA
 #define I2C_MASTER_NUM I2C_NUM_0      // Puerto I2C
@@ -23,6 +24,7 @@
 #define I2C_AS72XX_SLAVE_WRITE_REG  0x01
 #define I2C_AS72XX_SLAVE_READ_REG   0x02
 
+//Registros de los canales del sensor
 #define R_HIGH_REG 0x08
 #define R_LOW_REG  0x09
 #define S_HIGH_REG 0x0A
@@ -35,15 +37,13 @@
 #define V_LOW_REG  0x11
 #define W_HIGH_REG 0x12
 #define W_LOW_REG  0x13
-#define VIRTUAL_REG_DEVICE_TEMP 0x06 // Registro para la temperatura
+// Registro para la temperatura
+#define VIRTUAL_REG_DEVICE_TEMP 0x06 
 
 #define tag "SSD1306"
 
 
-//                WIFI
-
-
-
+//################## WIFI y THINGSBOARD ########################
 
 //URL thingsboard HTTP
 #define THINGSBOARD_URL "http://demo.thingsboard.io/api/v1/"
@@ -116,24 +116,7 @@ void wifi_init_sta(void) {
     ESP_LOGI(TAG, "Conectando al SSID: %s...", wifi_config.sta.ssid);
 }
 
-
-
-
-static void app_i2c_master_init() {
-    i2c_config_t conf = {
-        .mode = I2C_MODE_MASTER,
-        .sda_io_num = I2C_MASTER_SDA_IO,
-        .sda_pullup_en = GPIO_PULLUP_ENABLE,
-        .scl_io_num = I2C_MASTER_SCL_IO,
-        .scl_pullup_en = GPIO_PULLUP_ENABLE,
-        .master.clk_speed = I2C_MASTER_FREQ_HZ,
-    };
-    i2c_param_config(I2C_MASTER_NUM, &conf);
-    ESP_ERROR_CHECK(i2c_driver_install(I2C_MASTER_NUM, conf.mode, 0, 0, 0));
-    //i2c_driver_install(I2C_MASTER_NUM, conf.mode, 0, 0, 0);
-}
-
-
+//################## I2C y SENSOR AS7263 ########################
 esp_err_t i2c_master_read_slave_reg(uint8_t reg_addr, uint8_t *data) {
     esp_err_t ret;
     // Comienza una operación de escritura para indicar el registro a leer
@@ -192,8 +175,6 @@ void write_virtual_register(uint8_t reg, uint8_t value) {
     i2c_master_write_slave_reg(I2C_AS72XX_SLAVE_WRITE_REG, value);
 }
 
-
-
 // Lectura de un registro virtual
 uint8_t read_virtual_register(uint8_t reg) {
     uint8_t status, data;
@@ -215,7 +196,7 @@ uint8_t read_virtual_register(uint8_t reg) {
     return data;
 }
 
-
+//Escaneo para comprobar que todos los dispositivos han sido encontrados
 void i2c_scanner() {
     printf("Escaneando el bus I2C...\n");
     for (int addr = 1; addr < 127; addr++) {
@@ -237,12 +218,12 @@ void i2c_scanner() {
 // Función principal
 void app_main() {
 	
-    
+    	//Inicializar el wifi
 	wifi_init_sta();
-    vTaskDelay(pdMS_TO_TICKS(2000));
+    	vTaskDelay(pdMS_TO_TICKS(2000));
 	
-	
-	SSD1306_t dev;
+	//Inicializar dispositivos I2C
+ 	SSD1306_t dev;
 	i2c_master_init(&dev, I2C_MASTER_SDA_IO, I2C_MASTER_SCL_IO, CONFIG_RESET_GPIO);
 	#if CONFIG_FLIP
 	dev._flip = true;
@@ -252,12 +233,13 @@ void app_main() {
 	ESP_LOGI(tag, "Panel is 128x64");
 	ssd1306_init(&dev, 128, 64);
 	#endif // CONFIG_SSD1306_128x64
+
+	//Comprobar que todos los dispositivos se han inicializado
 	i2c_scanner();
 	
-	
-	//app_i2c_master_init();
     while (1) {
-		
+
+	//Leer temperatura
         uint8_t temperature = read_virtual_register(VIRTUAL_REG_DEVICE_TEMP);
         printf("Temperatura del sensor: %d °C\n", temperature);
         
@@ -265,57 +247,65 @@ void app_main() {
         uint8_t r_low = read_virtual_register(R_LOW_REG);
         uint8_t r_high = read_virtual_register(R_HIGH_REG);
         uint16_t r_value = (r_high << 8) | r_low;
+	    
         // Leer valor del canal S
         uint8_t s_low = read_virtual_register(S_LOW_REG);
         uint8_t s_high = read_virtual_register(S_HIGH_REG);
-        uint16_t s_value = (s_high << 8) | s_low;
+        uint16_t s_value = (s_high << 8) | s_low
+	    
          // Leer valor del canal T
         uint8_t t_low = read_virtual_register(T_LOW_REG);
         uint8_t t_high = read_virtual_register(T_HIGH_REG);
         uint16_t t_value = (t_high << 8) | t_low;
+	    
         // Leer valor del canal U
         uint8_t u_low = read_virtual_register(U_LOW_REG);
         uint8_t u_high = read_virtual_register(U_HIGH_REG);
         uint16_t u_value = (u_high << 8) | u_low;
+	    
         // Leer valor del canal V
         uint8_t v_low = read_virtual_register(V_LOW_REG);
         uint8_t v_high = read_virtual_register(V_HIGH_REG);
         uint16_t v_value = (v_high << 8) | v_low;
+	    
         // Leer valor del canal W
         uint8_t w_low = read_virtual_register(W_LOW_REG);
         uint8_t w_high = read_virtual_register(W_HIGH_REG);
         uint16_t w_value = (w_high << 8) | w_low;
+	    
         printf("R: %u, S: %u, T: %u, U: %u, V: %u, W: %u\n", r_value, s_value, t_value, u_value, v_value, w_value);
         
-		char buffer[128];
+	char buffer[128];
 
-		// Limpiar la pantalla antes de actualizar
-		ssd1306_clear_screen(&dev, false);
-		ssd1306_contrast(&dev, 0xFF);
+	// Limpiar la pantalla antes de actualizar
+	ssd1306_clear_screen(&dev, false);
+	ssd1306_contrast(&dev, 0xFF);
 		
-		// Crear y mostrar cada línea de texto en el OLED
-		snprintf(buffer, sizeof(buffer), "  Temp -> %u", temperature);
-		ssd1306_display_text(&dev, 0, buffer, strlen(buffer), false);
+	// Crear y mostrar cada línea de texto en el OLED
+	snprintf(buffer, sizeof(buffer), "  Temp -> %u", temperature);
+	ssd1306_display_text(&dev, 0, buffer, strlen(buffer), false);
 		
-		snprintf(buffer, sizeof(buffer), "  R -> %u", r_value);
-		ssd1306_display_text(&dev, 1, buffer, strlen(buffer), false);
+	snprintf(buffer, sizeof(buffer), "  R -> %u", r_value);
+	ssd1306_display_text(&dev, 1, buffer, strlen(buffer), false);
 		
-		snprintf(buffer, sizeof(buffer), "  S -> %u", s_value);
-		ssd1306_display_text(&dev, 2, buffer, strlen(buffer), false);
+	snprintf(buffer, sizeof(buffer), "  S -> %u", s_value);
+	ssd1306_display_text(&dev, 2, buffer, strlen(buffer), false);
 		
-		snprintf(buffer, sizeof(buffer), "  T -> %u", t_value);
-		ssd1306_display_text(&dev, 3, buffer, strlen(buffer), false);
+	snprintf(buffer, sizeof(buffer), "  T -> %u", t_value);
+	ssd1306_display_text(&dev, 3, buffer, strlen(buffer), false);
 		
-		snprintf(buffer, sizeof(buffer), "  U -> %u", u_value);
-		ssd1306_display_text(&dev, 4, buffer, strlen(buffer), false);
+	snprintf(buffer, sizeof(buffer), "  U -> %u", u_value);
+	ssd1306_display_text(&dev, 4, buffer, strlen(buffer), false);
 		
-		snprintf(buffer, sizeof(buffer), "  V -> %u", v_value);
-		ssd1306_display_text(&dev, 5, buffer, strlen(buffer), false);
+	snprintf(buffer, sizeof(buffer), "  V -> %u", v_value);
+	ssd1306_display_text(&dev, 5, buffer, strlen(buffer), false);
 		
-		snprintf(buffer, sizeof(buffer), "  W -> %u", w_value);
-		ssd1306_display_text(&dev, 6, buffer, strlen(buffer), false);
+	snprintf(buffer, sizeof(buffer), "  W -> %u", w_value);
+	ssd1306_display_text(&dev, 6, buffer, strlen(buffer), false);
 		
-	    send_data_to_thingsboard_http(r_value, s_value, t_value, u_value, v_value, w_value,temperature);
+	send_data_to_thingsboard_http(r_value, s_value, t_value, u_value, v_value, w_value,temperature);
+	    
         vTaskDelay(pdMS_TO_TICKS(1000)); // Retraso de 1 segundo
+	    
     }
 }
