@@ -1,0 +1,91 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM3 instead...[0m
+[0;33m--- esp-idf-monitor 1.5.0 on \\.\COM3 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081872: panic_abort at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40087901: esp_system_abort at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008de9d: __assert_func at C:/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x400f3943: tcpip_send_msg_wait_sem at C:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+0x40101245: netconn_gethostbyname_addrtype at C:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/lwip/src/api/api_lib.c:1325
+0x40113139: lwip_getaddrinfo at C:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/lwip/src/api/netdb.c:345
+0x40111b8d: getaddrinfo at C:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/include/lwip/netdb.h:23
+ (inlined by) esp_tls_hostname_to_fd at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp-tls/esp_tls.c:203
+0x40111edf: tcp_connect at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp-tls/esp_tls.c:340
+0x40112463: esp_tls_plain_tcp_connect at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp-tls/esp_tls.c:517
+0x40106b53: tcp_connect at C:/Espressif/frameworks/esp-idf-v5.2.2/components/tcp_transport/transport_ssl.c:141 (discriminator 1)
+0x40122fcd: esp_transport_connect at C:/Espressif/frameworks/esp-idf-v5.2.2/components/tcp_transport/transport.c:123
+0x400df0ab: esp_http_client_connect at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1402
+0x400dfd44: esp_http_client_perform at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1241
+0x400d6ff9: send_data_to_thingsboard_http at C:/Users/user2/workspace/AQUANIR/main/main.c:69
+0x400d7395: app_main at C:/Users/user2/workspace/AQUANIR/main/main.c:317
+0x40124c7b: main_task at C:/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/app_startup.c:208
+0x400883d5: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081872: panic_abort at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40087901: esp_system_abort at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008de9d: __assert_func at C:/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x400f3943: tcpip_send_msg_wait_sem at C:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+0x40101245: netconn_gethostbyname_addrtype at C:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/lwip/src/api/api_lib.c:1325
+0x40113139: lwip_getaddrinfo at C:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/lwip/src/api/netdb.c:345
+0x40111b8d: getaddrinfo at C:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/include/lwip/netdb.h:23
+ (inlined by) esp_tls_hostname_to_fd at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp-tls/esp_tls.c:203
+0x40111edf: tcp_connect at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp-tls/esp_tls.c:340
+0x40112463: esp_tls_plain_tcp_connect at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp-tls/esp_tls.c:517
+0x40106b53: tcp_connect at C:/Espressif/frameworks/esp-idf-v5.2.2/components/tcp_transport/transport_ssl.c:141 (discriminator 1)
+0x40122fcd: esp_transport_connect at C:/Espressif/frameworks/esp-idf-v5.2.2/components/tcp_transport/transport.c:123
+0x400df0ab: esp_http_client_connect at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1402
+0x400dfd44: esp_http_client_perform at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1241
+0x400d6ff9: send_data_to_thingsboard_http at C:/Users/user2/workspace/AQUANIR/main/main.c:69
+0x400d7395: app_main at C:/Users/user2/workspace/AQUANIR/main/main.c:317
+0x40124c7b: main_task at C:/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/app_startup.c:208
+0x400883d5: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081872: panic_abort at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40087901: esp_system_abort at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008de9d: __assert_func at C:/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x400f3943: tcpip_send_msg_wait_sem at C:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+0x40101245: netconn_gethostbyname_addrtype at C:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/lwip/src/api/api_lib.c:1325
+0x40113139: lwip_getaddrinfo at C:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/lwip/src/api/netdb.c:345
+0x40111b8d: getaddrinfo at C:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/include/lwip/netdb.h:23
+ (inlined by) esp_tls_hostname_to_fd at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp-tls/esp_tls.c:203
+0x40111edf: tcp_connect at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp-tls/esp_tls.c:340
+0x40112463: esp_tls_plain_tcp_connect at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp-tls/esp_tls.c:517
+0x40106b53: tcp_connect at C:/Espressif/frameworks/esp-idf-v5.2.2/components/tcp_transport/transport_ssl.c:141 (discriminator 1)
+0x40122fcd: esp_transport_connect at C:/Espressif/frameworks/esp-idf-v5.2.2/components/tcp_transport/transport.c:123
+0x400df0ab: esp_http_client_connect at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1402
+0x400dfd44: esp_http_client_perform at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1241
+0x400d6ff9: send_data_to_thingsboard_http at C:/Users/user2/workspace/AQUANIR/main/main.c:69
+0x400d7395: app_main at C:/Users/user2/workspace/AQUANIR/main/main.c:317
+0x40124c7b: main_task at C:/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/app_startup.c:208
+0x400883d5: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081872: panic_abort at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40087901: esp_system_abort at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008de9d: __assert_func at C:/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x400f3943: tcpip_send_msg_wait_sem at C:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+0x40101245: netconn_gethostbyname_addrtype at C:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/lwip/src/api/api_lib.c:1325
+0x40113139: lwip_getaddrinfo at C:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/lwip/src/api/netdb.c:345
+0x40111b8d: getaddrinfo at C:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/include/lwip/netdb.h:23
+ (inlined by) esp_tls_hostname_to_fd at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp-tls/esp_tls.c:203
+0x40111edf: tcp_connect at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp-tls/esp_tls.c:340
+0x40112463: esp_tls_plain_tcp_connect at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp-tls/esp_tls.c:517
+0x40106b53: tcp_connect at C:/Espressif/frameworks/esp-idf-v5.2.2/components/tcp_transport/transport_ssl.c:141 (discriminator 1)
+0x40122fcd: esp_transport_connect at C:/Espressif/frameworks/esp-idf-v5.2.2/components/tcp_transport/transport.c:123
+0x400df0ab: esp_http_client_connect at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1402
+0x400dfd44: esp_http_client_perform at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1241
+0x400d6ff9: send_data_to_thingsboard_http at C:/Users/user2/workspace/AQUANIR/main/main.c:69
+0x400d7395: app_main at C:/Users/user2/workspace/AQUANIR/main/main.c:317
+0x40124c7b: main_task at C:/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/app_startup.c:208
+0x400883d5: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0m

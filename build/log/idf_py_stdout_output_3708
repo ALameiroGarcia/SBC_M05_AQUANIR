@@ -1,0 +1,180 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\user2\workspace\AQUANIR\build\bootloader\esp-idf\esptool_py && python C:/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Users/user2/workspace/AQUANIR/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+In file included from C:/Users/user2/workspace/AQUANIR/main/main.c:8:
+C:/Users/user2/workspace/AQUANIR/main/main.c: In function 'event_handler':
+C:/Users/user2/workspace/AQUANIR/main/main.c:89:65: warning: passing argument 1 of 'ip4addr_ntoa' from incompatible pointer type [-Wincompatible-pointer-types]
+   89 |         ESP_LOGI(TAG, "Conectado! IP Address: %s", ip4addr_ntoa(&event->ip_info.ip));
+      |                                                                 ^~~~~~~~~~~~~~~~~~
+      |                                                                 |
+      |                                                                 esp_ip4_addr_t * {aka struct esp_ip4_addr *}
+C:/Espressif/frameworks/esp-idf-v5.2.2/components/log/include/esp_log.h:436:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  436 |         if (level==ESP_LOG_ERROR )          { esp_log_write(ESP_LOG_ERROR,      tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+C:/Espressif/frameworks/esp-idf-v5.2.2/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+C:/Users/user2/workspace/AQUANIR/main/main.c:89:9: note: in expansion of macro 'ESP_LOGI'
+   89 |         ESP_LOGI(TAG, "Conectado! IP Address: %s", ip4addr_ntoa(&event->ip_info.ip));
+      |         ^~~~~~~~
+In file included from C:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/lwip/src/include/lwip/ip_addr.h:43,
+                 from C:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/lwip/src/include/lwip/sockets.h:46,
+                 from C:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/include/lwip/sockets.h:8,
+                 from C:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/port/esp32xx/include/sys/socket.h:15,
+                 from C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/include/esp_http_client.h:13,
+                 from C:/Users/user2/workspace/AQUANIR/main/main.c:9:
+C:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/lwip/src/include/lwip/ip4_addr.h:207:38: note: expected 'const ip4_addr_t *' {aka 'const struct ip4_addr *'} but argument is of type 'esp_ip4_addr_t *' {aka 'struct esp_ip4_addr *'}
+  207 | char *ip4addr_ntoa(const ip4_addr_t *addr);
+      |                    ~~~~~~~~~~~~~~~~~~^~~~
+C:/Users/user2/workspace/AQUANIR/main/main.c:89:65: warning: passing argument 1 of 'ip4addr_ntoa' from incompatible pointer type [-Wincompatible-pointer-types]
+   89 |         ESP_LOGI(TAG, "Conectado! IP Address: %s", ip4addr_ntoa(&event->ip_info.ip));
+      |                                                                 ^~~~~~~~~~~~~~~~~~
+      |                                                                 |
+      |                                                                 esp_ip4_addr_t * {aka struct esp_ip4_addr *}
+C:/Espressif/frameworks/esp-idf-v5.2.2/components/log/include/esp_log.h:437:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  437 |         else if (level==ESP_LOG_WARN )      { esp_log_write(ESP_LOG_WARN,       tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+C:/Espressif/frameworks/esp-idf-v5.2.2/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+C:/Users/user2/workspace/AQUANIR/main/main.c:89:9: note: in expansion of macro 'ESP_LOGI'
+   89 |         ESP_LOGI(TAG, "Conectado! IP Address: %s", ip4addr_ntoa(&event->ip_info.ip));
+      |         ^~~~~~~~
+C:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/lwip/src/include/lwip/ip4_addr.h:207:38: note: expected 'const ip4_addr_t *' {aka 'const struct ip4_addr *'} but argument is of type 'esp_ip4_addr_t *' {aka 'struct esp_ip4_addr *'}
+  207 | char *ip4addr_ntoa(const ip4_addr_t *addr);
+      |                    ~~~~~~~~~~~~~~~~~~^~~~
+C:/Users/user2/workspace/AQUANIR/main/main.c:89:65: warning: passing argument 1 of 'ip4addr_ntoa' from incompatible pointer type [-Wincompatible-pointer-types]
+   89 |         ESP_LOGI(TAG, "Conectado! IP Address: %s", ip4addr_ntoa(&event->ip_info.ip));
+      |                                                                 ^~~~~~~~~~~~~~~~~~
+      |                                                                 |
+      |                                                                 esp_ip4_addr_t * {aka struct esp_ip4_addr *}
+C:/Espressif/frameworks/esp-idf-v5.2.2/components/log/include/esp_log.h:438:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  438 |         else if (level==ESP_LOG_DEBUG )     { esp_log_write(ESP_LOG_DEBUG,      tag, LOG_FORMAT(D, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+C:/Espressif/frameworks/esp-idf-v5.2.2/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+C:/Users/user2/workspace/AQUANIR/main/main.c:89:9: note: in expansion of macro 'ESP_LOGI'
+   89 |         ESP_LOGI(TAG, "Conectado! IP Address: %s", ip4addr_ntoa(&event->ip_info.ip));
+      |         ^~~~~~~~
+C:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/lwip/src/include/lwip/ip4_addr.h:207:38: note: expected 'const ip4_addr_t *' {aka 'const struct ip4_addr *'} but argument is of type 'esp_ip4_addr_t *' {aka 'struct esp_ip4_addr *'}
+  207 | char *ip4addr_ntoa(const ip4_addr_t *addr);
+      |                    ~~~~~~~~~~~~~~~~~~^~~~
+C:/Users/user2/workspace/AQUANIR/main/main.c:89:65: warning: passing argument 1 of 'ip4addr_ntoa' from incompatible pointer type [-Wincompatible-pointer-types]
+   89 |         ESP_LOGI(TAG, "Conectado! IP Address: %s", ip4addr_ntoa(&event->ip_info.ip));
+      |                                                                 ^~~~~~~~~~~~~~~~~~
+      |                                                                 |
+      |                                                                 esp_ip4_addr_t * {aka struct esp_ip4_addr *}
+C:/Espressif/frameworks/esp-idf-v5.2.2/components/log/include/esp_log.h:439:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  439 |         else if (level==ESP_LOG_VERBOSE )   { esp_log_write(ESP_LOG_VERBOSE,    tag, LOG_FORMAT(V, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+C:/Espressif/frameworks/esp-idf-v5.2.2/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+C:/Users/user2/workspace/AQUANIR/main/main.c:89:9: note: in expansion of macro 'ESP_LOGI'
+   89 |         ESP_LOGI(TAG, "Conectado! IP Address: %s", ip4addr_ntoa(&event->ip_info.ip));
+      |         ^~~~~~~~
+C:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/lwip/src/include/lwip/ip4_addr.h:207:38: note: expected 'const ip4_addr_t *' {aka 'const struct ip4_addr *'} but argument is of type 'esp_ip4_addr_t *' {aka 'struct esp_ip4_addr *'}
+  207 | char *ip4addr_ntoa(const ip4_addr_t *addr);
+      |                    ~~~~~~~~~~~~~~~~~~^~~~
+C:/Users/user2/workspace/AQUANIR/main/main.c:89:65: warning: passing argument 1 of 'ip4addr_ntoa' from incompatible pointer type [-Wincompatible-pointer-types]
+   89 |         ESP_LOGI(TAG, "Conectado! IP Address: %s", ip4addr_ntoa(&event->ip_info.ip));
+      |                                                                 ^~~~~~~~~~~~~~~~~~
+      |                                                                 |
+      |                                                                 esp_ip4_addr_t * {aka struct esp_ip4_addr *}
+C:/Espressif/frameworks/esp-idf-v5.2.2/components/log/include/esp_log.h:440:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  440 |         else                                { esp_log_write(ESP_LOG_INFO,       tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+C:/Espressif/frameworks/esp-idf-v5.2.2/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+C:/Users/user2/workspace/AQUANIR/main/main.c:89:9: note: in expansion of macro 'ESP_LOGI'
+   89 |         ESP_LOGI(TAG, "Conectado! IP Address: %s", ip4addr_ntoa(&event->ip_info.ip));
+      |         ^~~~~~~~
+C:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/lwip/src/include/lwip/ip4_addr.h:207:38: note: expected 'const ip4_addr_t *' {aka 'const struct ip4_addr *'} but argument is of type 'esp_ip4_addr_t *' {aka 'struct esp_ip4_addr *'}
+  207 | char *ip4addr_ntoa(const ip4_addr_t *addr);
+      |                    ~~~~~~~~~~~~~~~~~~^~~~
+C:/Users/user2/workspace/AQUANIR/main/main.c: At top level:
+C:/Users/user2/workspace/AQUANIR/main/main.c:122:13: warning: 'app_i2c_master_init' defined but not used [-Wunused-function]
+  122 | static void app_i2c_master_init() {
+      |             ^~~~~~~~~~~~~~~~~~~
+[3/8] Linking C static library esp-idf\main\libmain.a
+[4/8] Generating ld/sections.ld
+[5/8] Linking CXX executable app-template.elf
+[6/8] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated C:/Users/user2/workspace/AQUANIR/build/app-template.bin
+[7/8] cmd.exe /C "cd /D C:\Users\user2\workspace\AQUANIR\build\esp-idf\esptool_py && python C:/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/user2/workspace/AQUANIR/build/partition_table/partition-table.bin C:/Users/user2/workspace/AQUANIR/build/app-template.bin"
+app-template.bin binary size 0xe1570 bytes. Smallest app partition is 0x100000 bytes. 0x1ea90 bytes (12%) free.
+[7/8] cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.2.2\components\esptool_py && C:\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/Espressif/frameworks/esp-iesptool.py --chip esp32 -p COM3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 app-template.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.0
+Serial port COM3
+Connecting....
+Chip is ESP32-D0WDQ6 (revision v1.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 24:6f:28:7c:0b:88
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000f1fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26720 bytes to 16349...
+Writing at 0x00001000... (100 %)
+Wrote 26720 bytes (16349 compressed) at 0x00001000 in 0.9 seconds (effective 240.3 kbit/s)...
+Hash of data verified.
+Compressed 922992 bytes to 579374...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001d22d... (5 %)
+Writing at 0x000270cc... (8 %)
+Writing at 0x0002bf33... (11 %)
+Writing at 0x0003437a... (13 %)
+Writing at 0x0003d841... (16 %)
+Writing at 0x0004328d... (19 %)
+Writing at 0x00049119... (22 %)
+Writing at 0x0004f144... (25 %)
+Writing at 0x00054c98... (27 %)
+Writing at 0x0005abc6... (30 %)
+Writing at 0x0006063a... (33 %)
+Writing at 0x00066cee... (36 %)
+Writing at 0x0006bde9... (38 %)
+Writing at 0x000712e7... (41 %)
+Writing at 0x000766d5... (44 %)
+Writing at 0x0007bbd9... (47 %)
+Writing at 0x0008131a... (50 %)
+Writing at 0x00086ada... (52 %)
+Writing at 0x0008ca63... (55 %)
+Writing at 0x000924c3... (58 %)
+Writing at 0x00098115... (61 %)
+Writing at 0x0009dd2d... (63 %)
+Writing at 0x000a37a5... (66 %)
+Writing at 0x000a91d6... (69 %)
+Writing at 0x000aefb6... (72 %)
+Writing at 0x000b542d... (75 %)
+Writing at 0x000baf1b... (77 %)
+Writing at 0x000c09e0... (80 %)
+Writing at 0x000c63d0... (83 %)
+Writing at 0x000d0573... (86 %)
+Writing at 0x000d8424... (88 %)
+Writing at 0x000de04b... (91 %)
+Writing at 0x000e3a74... (94 %)
+Writing at 0x000ea08e... (97 %)
+Writing at 0x000ef303... (100 %)
+Wrote 922992 bytes (579374 compressed) at 0x00010000 in 13.3 seconds (effective 554.7 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 393.2 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+df-v5.2.2 -D SERIAL_TOOL=python;;C:/Espressif/frameworks/esp-idf-v5.2.2/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Users/user2/workspace/AQUANIR/build -P C:/Espressif/frameworks/esp-idf-v5.2.2/components/esptool_py/run_serial_tool.cmake"

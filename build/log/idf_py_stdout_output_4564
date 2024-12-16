@@ -1,0 +1,650 @@
+�ښ�j%�(39) boot.�ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (30) boot: ESP-IDF GIT-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Dec  4 2024 12:30:33[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=268b8h (157880) map[0m
+[0;32mI (158) esp_image: segment 1: paddr=000368e0 vaddr=3ffb0000 size=03fech ( 16364) load[0m
+[0;32mI (165) esp_image: segment 2: paddr=0003a8d4 vaddr=40080000 size=05744h ( 22340) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9e314h (647956) map[0m
+[0;32mI (396) esp_image: segment 4: paddr=000de33c vaddr=40085744 size=13204h ( 78340) load[0m
+[0;32mI (439) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (439) boot: Disabling RNG early entropy source...[0m
+[0;32mI (451) cpu_start: Multicore app[0m
+[0;32mI (459) cpu_start: Pro cpu start user code[0m
+[0;32mI (459) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (459) cpu_start: Application information:[0m
+[0;32mI (462) cpu_start: Project name:     app-template[0m
+[0;32mI (468) cpu_start: App version:      1[0m
+[0;32mI (472) cpu_start: Compile time:     Dec  4 2024 12:30:30[0m
+[0;32mI (478) cpu_start: ELF file SHA256:  2372e4a1a...[0m
+[0;32mI (484) cpu_start: ESP-IDF:          GIT-NOTFOUND[0m
+[0;32mI (489) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (494) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (499) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (504) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (511) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (517) heap_init: At 3FFB86A8 len 00027958 (158 KiB): DRAM[0m
+[0;32mI (523) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (529) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (536) heap_init: At 40098948 len 000076B8 (29 KiB): IRAM[0m
+[0;32mI (543) spi_flash: detected chip: generic[0m
+[0;32mI (547) spi_flash: flash io: dio[0m
+[0;33mW (550) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (564) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (575) main_task: Started on CPU0[0m
+[0;32mI (585) main_task: Calling app_main()[0m
+[0;32mI (655) wifi:wifi driver task: 3ffc06f4, prio:23, stack:6656, core=0[0m
+[0;32mI (685) wifi:wifi firmware version: 3e0076f[0m
+[0;32mI (685) wifi:wifi certification version: v7.0[0m
+[0;32mI (685) wifi:config NVS flash: enabled[0m
+[0;32mI (685) wifi:config nano formating: disabled[0m
+[0;32mI (685) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (695) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (695) wifi:Init management short buffer num: 32[0m
+[0;32mI (695) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (705) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (705) wifi:Init static rx buffer num: 10[0m
+[0;32mI (715) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (715) wifi_init: rx ba win: 6[0m
+[0;32mI (715) wifi_init: tcpip mbox: 32[0m
+[0;32mI (725) wifi_init: udp mbox: 6[0m
+[0;32mI (725) wifi_init: tcp mbox: 6[0m
+[0;32mI (735) wifi_init: tcp tx win: 5760[0m
+[0;32mI (735) wifi_init: tcp rx win: 5760[0m
+[0;32mI (735) wifi_init: tcp mss: 1440[0m
+[0;32mI (745) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (745) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (755) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+[0;32mI (845) wifi:mode : sta (24:6f:28:7c:0b:88)[0m
+[0;32mI (845) wifi:enable tsf[0m
+[0;32mI (845) wifi_Aquanir: Conectando al SSID: SBC...[0m
+[0;32mI (865) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (875) wifi:state: init -> auth (b0)[0m
+[0;32mI (875) wifi:state: auth -> assoc (0)[0m
+[0;32mI (895) wifi:state: assoc -> run (10)[0m
+[0;32mI (925) wifi:<ba-add>idx:0 (ifx:0, 70:4d:7b:60:50:e0), tid:0, ssn:0, winSize:64[0m
+[0;32mI (955) wifi:connected with SBC, aid = 1, channel 6, BW20, bssid = 70:4d:7b:60:50:e0[0m
+[0;32mI (955) wifi:security: WPA2-PSK, phy: bgn, rssi: -74[0m
+[0;32mI (955) wifi:pm start, type: 1[0m
+
+[0;32mI (955) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1045) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (2845) SSD1306: Legacy i2c driver is used[0m
+[0;32mI (2845) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (2895) SSD1306: Panel is 128x64[0m
+[0;32mI (2895) SSD1306: OLED configured successfully[0m
+Escaneando el bus I2C...
+Dispositivo encontrado en dirección: 0x3C
+Dispositivo encontrado en dirección: 0x49
+Escaneo finalizado.
+Temperatura del sensor: 27 °C
+R: 276, S: 1, T: 237, U: 35, V: 40, W: 41
+[0;32mI (3465) esp_netif_handlers: sta ip: 192.168.1.55, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (3465) wifi_Aquanir: Conectado! IP Address: 192.168.1.55[0m
+[0;32mI (4455) HTTP: Data sent successfully: {"r": 276, "s": 1, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 27}[0m
+Temperatura del sensor: 28 °C
+R: 276, S: 1, T: 237, U: 35, V: 40, W: 41
+[0;32mI (5965) HTTP: Data sent successfully: {"r": 276, "s": 1, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 28}[0m
+Temperatura del sensor: 27 °C
+R: 276, S: 0, T: 237, U: 35, V: 40, W: 41
+[0;32mI (7605) HTTP: Data sent successfully: {"r": 276, "s": 0, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 27}[0m
+Temperatura del sensor: 27 °C
+R: 276, S: 0, T: 237, U: 35, V: 40, W: 41
+[0;32mI (9045) HTTP: Data sent successfully: {"r": 276, "s": 0, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 27}[0m
+Temperatura del sensor: 27 °C
+R: 20, S: 255, T: 237, U: 35, V: 40, W: 41
+[0;32mI (10675) HTTP: Data sent successfully: {"r": 20, "s": 255, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 27}[0m
+Temperatura del sensor: 27 °C
+R: 276, S: 0, T: 236, U: 35, V: 40, W: 41
+[0;32mI (12115) HTTP: Data sent successfully: {"r": 276, "s": 0, "t": 236, "u": 35, "v": 40, "w": 41,"temperature": 27}[0m
+Temperatura del sensor: 28 °C
+R: 276, S: 1, T: 237, U: 35, V: 40, W: 41
+[0;32mI (14585) HTTP: Data sent successfully: {"r": 276, "s": 1, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 28}[0m
+Temperatura del sensor: 28 °C
+R: 276, S: 1, T: 237, U: 35, V: 40, W: 41
+[0;32mI (16115) HTTP: Data sent successfully: {"r": 276, "s": 1, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 28}[0m
+Temperatura del sensor: 27 °C
+R: 276, S: 0, T: 237, U: 35, V: 40, W: 41
+[0;32mI (17645) HTTP: Data sent successfully: {"r": 276, "s": 0, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 27}[0m
+Temperatura del sensor: 28 °C
+R: 276, S: 0, T: 236, U: 35, V: 40, W: 41
+[0;32mI (19185) HTTP: Data sent successfully: {"r": 276, "s": 0, "t": 236, "u": 35, "v": 40, "w": 41,"temperature": 28}[0m
+Temperatura del sensor: 27 °C
+R: 20, S: 255, T: 237, U: 35, V: 40, W: 41
+[0;32mI (20715) HTTP: Data sent successfully: {"r": 20, "s": 255, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 27}[0m
+Temperatura del sensor: 27 °C
+R: 276, S: 0, T: 237, U: 35, V: 40, W: 41
+[0;32mI (22355) HTTP: Data sent successfully: {"r": 276, "s": 0, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 27}[0m
+Temperatura del sensor: 28 °C
+R: 276, S: 0, T: 236, U: 35, V: 40, W: 41
+[0;32mI (24205) HTTP: Data sent successfully: {"r": 276, "s": 0, "t": 236, "u": 35, "v": 40, "w": 41,"temperature": 28}[0m
+Temperatura del sensor: 28 °C
+R: 277, S: 1, T: 237, U: 35, V: 40, W: 41
+[0;32mI (25635) HTTP: Data sent successfully: {"r": 277, "s": 1, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 28}[0m
+Temperatura del sensor: 27 °C
+R: 276, S: 1, T: 237, U: 35, V: 40, W: 41
+[0;32mI (27175) HTTP: Data sent successfully: {"r": 276, "s": 1, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 27}[0m
+Temperatura del sensor: 27 °C
+R: 277, S: 1, T: 237, U: 35, V: 40, W: 41
+[0;32mI (28705) HTTP: Data sent successfully: {"r": 277, "s": 1, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 27}[0m
+Temperatura del sensor: 27 °C
+R: 277, S: 1, T: 237, U: 35, V: 40, W: 41
+[0;32mI (30245) HTTP: Data sent successfully: {"r": 277, "s": 1, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 27}[0m
+Temperatura del sensor: 27 °C
+R: 21, S: 215, T: 237, U: 28, V: 32, W: 41
+[0;32mI (31775) HTTP: Data sent successfully: {"r": 21, "s": 215, "t": 237, "u": 28, "v": 32, "w": 41,"temperature": 27}[0m
+Temperatura del sensor: 27 °C
+R: 17, S: 9, T: 4, U: 2, V: 1, W: 1
+[0;32mI (33315) HTTP: Data sent successfully: {"r": 17, "s": 9, "t": 4, "u": 2, "v": 1, "w": 1,"temperature": 27}[0m
+Temperatura del sensor: 27 °C
+R: 1, S: 10, T: 5, U: 2, V: 1, W: 1
+[0;32mI (34955) HTTP: Data sent successfully: {"r": 1, "s": 10, "t": 5, "u": 2, "v": 1, "w": 1,"temperature": 27}[0m
+Temperatura del sensor: 27 °C
+R: 1, S: 66, T: 29, U: 5, V: 5, W: 6
+[0;32mI (36595) HTTP: Data sent successfully: {"r": 1, "s": 66, "t": 29, "u": 5, "v": 5, "w": 6,"temperature": 27}[0m
+Temperatura del sensor: 27 °C
+R: 2, S: 23, T: 183, U: 26, V: 30, W: 31
+[0;32mI (39255) HTTP: Data sent successfully: {"r": 2, "s": 23, "t": 183, "u": 26, "v": 30, "w": 31,"temperature": 27}[0m
+Temperatura del sensor: 27 °C
+R: 257, S: 1, T: 237, U: 35, V: 40, W: 41
+[0;32mI (42215) HTTP: Data sent successfully: {"r": 257, "s": 1, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 27}[0m
+Temperatura del sensor: 28 °C
+R: 276, S: 0, T: 237, U: 35, V: 40, W: 41
+[0;32mI (43755) HTTP: Data sent successfully: {"r": 276, "s": 0, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 28}[0m
+Temperatura del sensor: 27 °C
+R: 20, S: 254, T: 236, U: 35, V: 40, W: 41
+[0;32mI (45295) HTTP: Data sent successfully: {"r": 20, "s": 254, "t": 236, "u": 35, "v": 40, "w": 41,"temperature": 27}[0m
+Temperatura del sensor: 27 °C
+R: 20, S: 254, T: 236, U: 35, V: 40, W: 41
+[0;32mI (46835) HTTP: Data sent successfully: {"r": 20, "s": 254, "t": 236, "u": 35, "v": 40, "w": 41,"temperature": 27}[0m
+Temperatura del sensor: 28 °C
+R: 20, S: 255, T: 236, U: 35, V: 40, W: 41
+[0;32mI (48365) HTTP: Data sent successfully: {"r": 20, "s": 255, "t": 236, "u": 35, "v": 40, "w": 41,"temperature": 28}[0m
+Temperatura del sensor: 28 °C
+R: 20, S: 255, T: 237, U: 35, V: 40, W: 41
+[0;32mI (49925) HTTP: Data sent successfully: {"r": 20, "s": 255, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 28}[0m
+Temperatura del sensor: 27 °C
+R: 20, S: 213, T: 235, U: 30, V: 37, W: 40
+[0;32mI (51645) HTTP: Data sent successfully: {"r": 20, "s": 213, "t": 235, "u": 30, "v": 37, "w": 40,"temperature": 27}[0m
+Temperatura del sensor: 27 °C
+R: 20, S: 253, T: 236, U: 34, V: 40, W: 41
+[0;32mI (53275) HTTP: Data sent successfully: {"r": 20, "s": 253, "t": 236, "u": 34, "v": 40, "w": 41,"temperature": 27}[0m
+Temperatura del sensor: 27 °C
+R: 20, S: 253, T: 236, U: 34, V: 40, W: 41
+[0;32mI (56355) HTTP: Data sent successfully: {"r": 20, "s": 253, "t": 236, "u": 34, "v": 40, "w": 41,"temperature": 27}[0m
+Temperatura del sensor: 27 °C
+R: 20, S: 234, T: 235, U: 33, V: 39, W: 40
+[0;32mI (57885) HTTP: Data sent successfully: {"r": 20, "s": 234, "t": 235, "u": 33, "v": 39, "w": 40,"temperature": 27}[0m
+Temperatura del sensor: 28 °C
+R: 20, S: 244, T: 233, U: 31, V: 38, W: 40
+[0;32mI (63625) HTTP: Data sent successfully: {"r": 20, "s": 244, "t": 233, "u": 31, "v": 38, "w": 40,"temperature": 28}[0m
+Temperatura del sensor: 27 °C
+R: 20, S: 141, T: 22, U: 7, V: 5, W: 8
+[0;32mI (65475) HTTP: Data sent successfully: {"r": 20, "s": 141, "t": 22, "u": 7, "v": 5, "w": 8,"temperature": 27}[0m
+Temperatura del sensor: 27 °C
+R: 14, S: 65, T: 221, U: 8, V: 9, W: 39
+[0;32mI (67105) HTTP: Data sent successfully: {"r": 14, "s": 65, "t": 221, "u": 8, "v": 9, "w": 39,"temperature": 27}[0m
+ښ�j%�(39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=268b8h (157880) map[0m
+[0;32mI (158) esp_image: segment 1: paddr=000368e0 vaddr=3ffb0000 size=03fech ( 16364) load[0m
+[0;32mI (164) esp_image: segment 2: paddr=0003a8d4 vaddr=40080000 size=05744h ( 22340) load[0m
+[0;32mI (173) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9e314h (647956) map[0m
+[0;32mI (396) esp_image: segment 4: paddr=000de33c vaddr=40085744 size=13204h ( 78340) load[0m
+[0;32mI (439) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (439) boot: Disabling RNG early entropy source...[0m
+[0;32mI (450) cpu_start: Multicore app[0m
+[0;32mI (459) cpu_start: Pro cpu start user code[0m
+[0;32mI (459) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (459) cpu_start: Application information:[0m
+[0;32mI (462) cpu_start: Project name:     app-template[0m
+[0;32mI (468) cpu_start: App version:      1[0m
+[0;32mI (472) cpu_start: Compile time:     Dec  4 2024 12:30:30[0m
+[0;32mI (478) cpu_start: ELF file SHA256:  2372e4a1a...[0m
+[0;32mI (484) cpu_start: ESP-IDF:          GIT-NOTFOUND[0m
+[0;32mI (489) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (494) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (499) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (504) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (511) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (517) heap_init: At 3FFB86A8 len 00027958 (158 KiB): DRAM[0m
+[0;32mI (523) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (529) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (536) heap_init: At 40098948 len 000076B8 (29 KiB): IRAM[0m
+[0;32mI (543) spi_flash: detected chip: generic[0m
+[0;32mI (546) spi_flash: flash io: dio[0m
+[0;33mW (550) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (564) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (575) main_task: Started on CPU0[0m
+[0;32mI (585) main_task: Calling app_main()[0m
+[0;32mI (655) wifi:wifi driver task: 3ffc06f4, prio:23, stack:6656, core=0[0m
+[0;32mI (685) wifi:wifi firmware version: 3e0076f[0m
+[0;32mI (685) wifi:wifi certification version: v7.0[0m
+[0;32mI (685) wifi:config NVS flash: enabled[0m
+[0;32mI (685) wifi:config nano formating: disabled[0m
+[0;32mI (685) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (695) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (695) wifi:Init management short buffer num: 32[0m
+[0;32mI (695) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (705) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (705) wifi:Init static rx buffer num: 10[0m
+[0;32mI (715) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (715) wifi_init: rx ba win: 6[0m
+[0;32mI (715) wifi_init: tcpip mbox: 32[0m
+[0;32mI (725) wifi_init: udp mbox: 6[0m
+[0;32mI (725) wifi_init: tcp mbox: 6[0m
+[0;32mI (735) wifi_init: tcp tx win: 5760[0m
+[0;32mI (735) wifi_init: tcp rx win: 5760[0m
+[0;32mI (735) wifi_init: tcp mss: 1440[0m
+[0;32mI (745) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (745) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (755) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+[0;32mI (845) wifi:mode : sta (24:6f:28:7c:0b:88)[0m
+[0;32mI (845) wifi:enable tsf[0m
+[0;32mI (845) wifi_Aquanir: Conectando al SSID: SBC...[0m
+[0;32mI (855) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (865) wifi:state: init -> auth (b0)[0m
+[0;32mI (865) wifi:state: auth -> assoc (0)[0m
+[0;32mI (875) wifi:state: assoc -> run (10)[0m
+[0;32mI (915) wifi:<ba-add>idx:0 (ifx:0, 70:4d:7b:60:50:e0), tid:0, ssn:0, winSize:64[0m
+[0;32mI (965) wifi:connected with SBC, aid = 1, channel 6, BW20, bssid = 70:4d:7b:60:50:e0[0m
+[0;32mI (965) wifi:security: WPA2-PSK, phy: bgn, rssi: -80[0m
+[0;32mI (975) wifi:pm start, type: 1[0m
+
+[0;32mI (975) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1195) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (2485) esp_netif_handlers: sta ip: 192.168.1.55, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2485) wifi_Aquanir: Conectado! IP Address: 192.168.1.55[0m
+[0;32mI (2845) SSD1306: Legacy i2c driver is used[0m
+[0;32mI (2845) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (2895) SSD1306: Panel is 128x64[0m
+[0;32mI (2895) SSD1306: OLED configured successfully[0m
+Escaneando el bus I2C...
+Dispositivo encontrado en dirección: 0x3C
+Dispositivo encontrado en dirección: 0x49
+Escaneo finalizado.
+Temperatura del sensor: 28 °C
+R: 0, S: 5, T: 5, U: 2, V: 1, W: 1
+[0;32mI (3575) HTTP: Data sent successfully: {"r": 0, "s": 5, "t": 5, "u": 2, "v": 1, "w": 1,"temperature": 28}[0m
+Temperatura del sensor: 28 °C
+R: 0, S: 17, T: 69, U: 9, V: 11, W: 13
+[0;32mI (5195) HTTP: Data sent successfully: {"r": 0, "s": 17, "t": 69, "u": 9, "v": 11, "w": 13,"temperature": 28}[0m
+Temperatura del sensor: 28 °C
+R: 257, S: 1, T: 236, U: 35, V: 40, W: 41
+[0;32mI (6935) HTTP: Data sent successfully: {"r": 257, "s": 1, "t": 236, "u": 35, "v": 40, "w": 41,"temperature": 28}[0m
+Temperatura del sensor: 28 °C
+R: 277, S: 0, T: 236, U: 34, V: 40, W: 41
+[0;32mI (8475) HTTP: Data sent successfully: {"r": 277, "s": 0, "t": 236, "u": 34, "v": 40, "w": 41,"temperature": 28}[0m
+Temperatura del sensor: 28 °C
+R: 20, S: 52, T: 205, U: 6, V: 4, W: 36
+[0;32mI (11235) HTTP: Data sent successfully: {"r": 20, "s": 52, "t": 205, "u": 6, "v": 4, "w": 36,"temperature": 28}[0m
+Temperatura del sensor: 29 °C
+R: 258, S: 10, T: 235, U: 35, V: 40, W: 41
+[0;32mI (12875) HTTP: Data sent successfully: {"r": 258, "s": 10, "t": 235, "u": 35, "v": 40, "w": 41,"temperature": 29}[0m
+Temperatura del sensor: 30 °C
+R: 277, S: 10, T: 238, U: 35, V: 40, W: 42
+[0;32mI (14625) HTTP: Data sent successfully: {"r": 277, "s": 10, "t": 238, "u": 35, "v": 40, "w": 42,"temperature": 30}[0m
+Temperatura del sensor: 31 °C
+R: 277, S: 9, T: 233, U: 32, V: 38, W: 41
+[0;32mI (16465) HTTP: Data sent successfully: {"r": 277, "s": 9, "t": 233, "u": 32, "v": 38, "w": 41,"temperature": 31}[0m
+Temperatura del sensor: 32 °C
+R: 21, S: 221, T: 158, U: 21, V: 25, W: 25
+[0;32mI (17995) HTTP: Data sent successfully: {"r": 21, "s": 221, "t": 158, "u": 21, "v": 25, "w": 25,"temperature": 32}[0m
+Temperatura del sensor: 32 °C
+R: 1043, S: 204, T: 196, U: 130, V: 85, W: 65
+[0;32mI (19845) HTTP: Data sent successfully: {"r": 1043, "s": 204, "t": 196, "u": 130, "v": 85, "w": 65,"temperature": 32}[0m
+Temperatura del sensor: 33 °C
+R: 3636, S: 1329, T: 11, U: 202, V: 899, W: 97
+[0;32mI (21485) HTTP: Data sent successfully: {"r": 3636, "s": 1329, "t": 11, "u": 202, "v": 899, "w": 97,"temperature": 33}[0m
+Temperatura del sensor: 34 °C
+R: 2436, S: 764, T: 73, U: 177, V: 370, W: 8
+[0;32mI (23225) HTTP: Data sent successfully: {"r": 2436, "s": 764, "t": 73, "u": 177, "v": 370, "w": 8,"temperature": 34}[0m
+Temperatura del sensor: 35 °C
+R: 2404, S: 560, T: 14, U: 164, V: 106, W: 207
+[0;32mI (25065) HTTP: Data sent successfully: {"r": 2404, "s": 560, "t": 14, "u": 164, "v": 106, "w": 207,"temperature": 35}[0m
+Temperatura del sensor: 35 °C
+R: 2140, S: 435, T: 255, U: 159, V: 103, W: 196
+[0;32mI (26905) HTTP: Data sent successfully: {"r": 2140, "s": 435, "t": 255, "u": 159, "v": 103, "w": 196,"temperature": 35}[0m
+Temperatura del sensor: 36 °C
+R: 1624, S: 494, T: 223, U: 141, V: 92, W: 171
+[0;32mI (28555) HTTP: Data sent successfully: {"r": 1624, "s": 494, "t": 223, "u": 141, "v": 92, "w": 171,"temperature": 36}[0m
+Temperatura del sensor: 37 °C
+R: 1611, S: 393, T: 199, U: 137, V: 89, W: 154
+[0;32mI (30295) HTTP: Data sent successfully: {"r": 1611, "s": 393, "t": 199, "u": 137, "v": 89, "w": 154,"temperature": 37}[0m
+Temperatura del sensor: 37 °C
+R: 1607, S: 324, T: 179, U: 132, V: 86, W: 140
+[0;32mI (32125) HTTP: Data sent successfully: {"r": 1607, "s": 324, "t": 179, "u": 132, "v": 86, "w": 140,"temperature": 37}[0m
+Temperatura del sensor: 38 °C
+R: 1604, S: 279, T: 173, U: 130, V: 84, W: 136
+[0;33mW (38335) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;31mE (38335) HTTP: Error sending data: ESP_ERR_HTTP_EAGAIN[0m
+Temperatura del sensor: 39 °C
+R: 322, S: 9, T: 186, U: 35, V: 40, W: 34
+[0;32mI (40115) HTTP: Data sent successfully: {"r": 322, "s": 9, "t": 186, "u": 35, "v": 40, "w": 34,"temperature": 39}[0m
+Temperatura del sensor: 40 °C
+R: 277, S: 9, T: 238, U: 35, V: 40, W: 42
+[0;32mI (41765) HTTP: Data sent successfully: {"r": 277, "s": 9, "t": 238, "u": 35, "v": 40, "w": 42,"temperature": 40}[0m
+Temperatura del sensor: 40 °C
+R: 21, S: 141, T: 100, U: 19, V: 18, W: 18
+[0;32mI (43495) HTTP: Data sent successfully: {"r": 21, "s": 141, "t": 100, "u": 19, "v": 18, "w": 18,"temperature": 40}[0m
+Temperatura del sensor: 40 °C
+R: 10, S: 134, T: 102, U: 19, V: 18, W: 18
+[0;32mI (45445) HTTP: Data sent successfully: {"r": 10, "s": 134, "t": 102, "u": 19, "v": 18, "w": 18,"temperature": 40}[0m
+Temperatura del sensor: 41 °C
+R: 9, S: 174, T: 105, U: 24, V: 27, W: 18
+[0;32mI (47185) HTTP: Data sent successfully: {"r": 9, "s": 174, "t": 105, "u": 24, "v": 27, "w": 18,"temperature": 41}[0m
+Temperatura del sensor: 41 °C
+R: 14, S: 255, T: 238, U: 34, V: 40, W: 41
+[0;32mI (51795) HTTP: Data sent successfully: {"r": 14, "s": 255, "t": 238, "u": 34, "v": 40, "w": 41,"temperature": 41}[0m
+Temperatura del sensor: 39 °C
+R: 20, S: 36, T: 204, U: 26, V: 32, W: 28
+[0;32mI (58345) HTTP: Data sent successfully: {"r": 20, "s": 36, "t": 204, "u": 26, "v": 32, "w": 28,"temperature": 39}[0m
+Temperatura del sensor: 37 °C
+R: 8, S: 20, T: 40, U: 9, V: 8, W: 2
+[0;32mI (60195) HTTP: Data sent successfully: {"r": 8, "s": 20, "t": 40, "u": 9, "v": 8, "w": 2,"temperature": 37}[0m
+Temperatura del sensor: 36 °C
+R: 1, S: 11, T: 26, U: 5, V: 6, W: 2
+[0;32mI (62035) HTTP: Data sent successfully: {"r": 1, "s": 11, "t": 26, "u": 5, "v": 6, "w": 2,"temperature": 36}[0m
+&�+
+B��J��ѹesp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=268b8h (157880) map[0m
+[0;32mI (158) esp_image: segment 1: paddr=000368e0 vaddr=3ffb0000 size=03fech ( 16364) load[0m
+[0;32mI (164) esp_image: segment 2: paddr=0003a8d4 vaddr=40080000 size=05744h ( 22340) load[0m
+[0;32mI (173) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9e314h (647956) map[0m
+[0;32mI (396) esp_image: segment 4: paddr=000de33c vaddr=40085744 size=13204h ( 78340) load[0m
+[0;32mI (439) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (439) boot: Disabling RNG early entropy source...[0m
+[0;32mI (450) cpu_start: Multicore app[0m
+[0;32mI (459) cpu_start: Pro cpu start user code[0m
+[0;32mI (459) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (459) cpu_start: Application information:[0m
+[0;32mI (462) cpu_start: Project name:     app-template[0m
+[0;32mI (468) cpu_start: App version:      1[0m
+[0;32mI (472) cpu_start: Compile time:     Dec  4 2024 12:30:30[0m
+[0;32mI (478) cpu_start: ELF file SHA256:  2372e4a1a...[0m
+[0;32mI (484) cpu_start: ESP-IDF:          GIT-NOTFOUND[0m
+[0;32mI (489) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (494) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (499) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (504) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (511) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (517) heap_init: At 3FFB86A8 len 00027958 (158 KiB): DRAM[0m
+[0;32mI (523) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (529) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (536) heap_init: At 40098948 len 000076B8 (29 KiB): IRAM[0m
+[0;32mI (543) spi_flash: detected chip: generic[0m
+[0;32mI (546) spi_flash: flash io: dio[0m
+[0;33mW (550) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (564) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (575) main_task: Started on CPU0[0m
+[0;32mI (585) main_task: Calling app_main()[0m
+[0;32mI (655) wifi:wifi driver task: 3ffc06f4, prio:23, stack:6656, core=0[0m
+[0;32mI (685) wifi:wifi firmware version: 3e0076f[0m
+[0;32mI (685) wifi:wifi certification version: v7.0[0m
+[0;32mI (685) wifi:config NVS flash: enabled[0m
+[0;32mI (685) wifi:config nano formating: disabled[0m
+[0;32mI (685) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (695) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (695) wifi:Init management short buffer num: 32[0m
+[0;32mI (695) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (705) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (705) wifi:Init static rx buffer num: 10[0m
+[0;32mI (715) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (715) wifi_init: rx ba win: 6[0m
+[0;32mI (715) wifi_init: tcpip mbox: 32[0m
+[0;32mI (725) wifi_init: udp mbox: 6[0m
+[0;32mI (725) wifi_init: tcp mbox: 6[0m
+[0;32mI (735) wifi_init: tcp tx win: 5760[0m
+[0;32mI (735) wifi_init: tcp rx win: 5760[0m
+[0;32mI (735) wifi_init: tcp mss: 1440[0m
+[0;32mI (745) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (745) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (755) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+[0;32mI (845) wifi:mode : sta (24:6f:28:7c:0b:88)[0m
+[0;32mI (845) wifi:enable tsf[0m
+[0;32mI (845) wifi_Aquanir: Conectando al SSID: SBC...[0m
+[0;32mI (855) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (865) wifi:state: init -> auth (b0)[0m
+[0;32mI (865) wifi:state: auth -> assoc (0)[0m
+[0;32mI (875) wifi:state: assoc -> run (10)[0m
+[0;32mI (885) wifi:<ba-add>idx:0 (ifx:0, 70:4d:7b:8c:a3:b8), tid:0, ssn:0, winSize:64[0m
+[0;32mI (905) wifi:connected with SBC, aid = 3, channel 6, BW20, bssid = 70:4d:7b:8c:a3:b8[0m
+[0;32mI (905) wifi:security: WPA2-PSK, phy: bgn, rssi: -54[0m
+[0;32mI (915) wifi:pm start, type: 1[0m
+
+[0;32mI (915) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (965) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (2845) SSD1306: Legacy i2c driver is used[0m
+[0;32mI (2845) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (2895) SSD1306: Panel is 128x64[0m
+[0;32mI (2895) SSD1306: OLED configured successfully[0m
+Escaneando el bus I2C...
+Dispositivo encontrado en dirección: 0x3C
+Dispositivo encontrado en dirección: 0x49
+Escaneo finalizado.
+Temperatura del sensor: 35 °C
+R: 0, S: 236, T: 232, U: 33, V: 38, W: 39
+[0;32mI (3415) esp_netif_handlers: sta ip: 192.168.1.187, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (3415) wifi_Aquanir: Conectado! IP Address: 192.168.1.187[0m
+[0;32mI (4655) HTTP: Data sent successfully: {"r": 0, "s": 236, "t": 232, "u": 33, "v": 38, "w": 39,"temperature": 35}[0m
+Temperatura del sensor: 35 °C
+R: 20, S: 236, T: 232, U: 32, V: 38, W: 38
+[0;32mI (6955) HTTP: Data sent successfully: {"r": 20, "s": 236, "t": 232, "u": 32, "v": 38, "w": 38,"temperature": 35}[0m
+Temperatura del sensor: 34 °C
+R: 20, S: 90, T: 74, U: 9, V: 16, W: 14
+[0;32mI (9065) HTTP: Data sent successfully: {"r": 20, "s": 90, "t": 74, "u": 9, "v": 16, "w": 14,"temperature": 34}[0m
+Temperatura del sensor: 34 °C
+R: 269, S: 0, T: 237, U: 35, V: 40, W: 41
+[0;32mI (10905) HTTP: Data sent successfully: {"r": 269, "s": 0, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 34}[0m
+Temperatura del sensor: 33 °C
+R: 21, S: 247, T: 237, U: 34, V: 39, W: 41
+[0;32mI (12755) HTTP: Data sent successfully: {"r": 21, "s": 247, "t": 237, "u": 34, "v": 39, "w": 41,"temperature": 33}[0m
+Temperatura del sensor: 33 °C
+R: 20, S: 187, T: 202, U: 28, V: 35, W: 29
+[0;32mI (14595) HTTP: Data sent successfully: {"r": 20, "s": 187, "t": 202, "u": 28, "v": 35, "w": 29,"temperature": 33}[0m
+Temperatura del sensor: 33 °C
+R: 19, S: 254, T: 236, U: 35, V: 40, W: 41
+[0;32mI (16445) HTTP: Data sent successfully: {"r": 19, "s": 254, "t": 236, "u": 35, "v": 40, "w": 41,"temperature": 33}[0m
+Temperatura del sensor: 33 °C
+R: 20, S: 255, T: 236, U: 35, V: 40, W: 41
+[0;32mI (18285) HTTP: Data sent successfully: {"r": 20, "s": 255, "t": 236, "u": 35, "v": 40, "w": 41,"temperature": 33}[0m
+Temperatura del sensor: 32 °C
+R: 20, S: 255, T: 237, U: 35, V: 40, W: 41
+[0;32mI (20125) HTTP: Data sent successfully: {"r": 20, "s": 255, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 32}[0m
+Temperatura del sensor: 32 °C
+R: 21, S: 255, T: 236, U: 35, V: 40, W: 41
+[0;32mI (21965) HTTP: Data sent successfully: {"r": 21, "s": 255, "t": 236, "u": 35, "v": 40, "w": 41,"temperature": 32}[0m
+Temperatura del sensor: 32 °C
+R: 277, S: 0, T: 237, U: 35, V: 40, W: 41
+[0;32mI (23815) HTTP: Data sent successfully: {"r": 277, "s": 0, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 32}[0m
+Temperatura del sensor: 32 °C
+R: 21, S: 254, T: 236, U: 35, V: 40, W: 41
+[0;32mI (25655) HTTP: Data sent successfully: {"r": 21, "s": 254, "t": 236, "u": 35, "v": 40, "w": 41,"temperature": 32}[0m
+Temperatura del sensor: 32 °C
+R: 276, S: 0, T: 236, U: 35, V: 40, W: 41
+[0;32mI (27495) HTTP: Data sent successfully: {"r": 276, "s": 0, "t": 236, "u": 35, "v": 40, "w": 41,"temperature": 32}[0m
+Temperatura del sensor: 32 °C
+R: 276, S: 1, T: 237, U: 35, V: 40, W: 41
+[0;32mI (29345) HTTP: Data sent successfully: {"r": 276, "s": 1, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 32}[0m
+Temperatura del sensor: 32 °C
+R: 277, S: 1, T: 237, U: 35, V: 40, W: 41
+[0;32mI (31185) HTTP: Data sent successfully: {"r": 277, "s": 1, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 32}[0m
+Temperatura del sensor: 31 °C
+R: 276, S: 0, T: 237, U: 35, V: 40, W: 41
+[0;32mI (33035) HTTP: Data sent successfully: {"r": 276, "s": 0, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 276, S: 0, T: 237, U: 35, V: 40, W: 41
+[0;32mI (34565) HTTP: Data sent successfully: {"r": 276, "s": 0, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 276, S: 0, T: 237, U: 35, V: 40, W: 41
+[0;32mI (36105) HTTP: Data sent successfully: {"r": 276, "s": 0, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 276, S: 1, T: 237, U: 35, V: 40, W: 41
+[0;32mI (37945) HTTP: Data sent successfully: {"r": 276, "s": 1, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 277, S: 1, T: 237, U: 35, V: 40, W: 41
+[0;32mI (39785) HTTP: Data sent successfully: {"r": 277, "s": 1, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 277, S: 1, T: 237, U: 35, V: 40, W: 41
+[0;32mI (41335) HTTP: Data sent successfully: {"r": 277, "s": 1, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 277, S: 1, T: 237, U: 35, V: 40, W: 41
+[0;32mI (42855) HTTP: Data sent successfully: {"r": 277, "s": 1, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 277, S: 1, T: 237, U: 35, V: 40, W: 41
+[0;32mI (44395) HTTP: Data sent successfully: {"r": 277, "s": 1, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 277, S: 1, T: 237, U: 35, V: 40, W: 41
+[0;32mI (45935) HTTP: Data sent successfully: {"r": 277, "s": 1, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 31}[0m
+Temperatura del sensor: 30 °C
+R: 277, S: 1, T: 237, U: 35, V: 40, W: 41
+[0;32mI (47785) HTTP: Data sent successfully: {"r": 277, "s": 1, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 277, S: 0, T: 236, U: 35, V: 40, W: 41
+[0;32mI (49625) HTTP: Data sent successfully: {"r": 277, "s": 0, "t": 236, "u": 35, "v": 40, "w": 41,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 20, S: 253, T: 236, U: 34, V: 40, W: 41
+[0;32mI (51465) HTTP: Data sent successfully: {"r": 20, "s": 253, "t": 236, "u": 34, "v": 40, "w": 41,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 20, S: 254, T: 236, U: 35, V: 40, W: 41
+[0;32mI (53305) HTTP: Data sent successfully: {"r": 20, "s": 254, "t": 236, "u": 35, "v": 40, "w": 41,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 20, S: 254, T: 236, U: 35, V: 40, W: 41
+[0;32mI (54835) HTTP: Data sent successfully: {"r": 20, "s": 254, "t": 236, "u": 35, "v": 40, "w": 41,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 20, S: 255, T: 237, U: 35, V: 40, W: 41
+[0;32mI (56685) HTTP: Data sent successfully: {"r": 20, "s": 255, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 276, S: 0, T: 237, U: 35, V: 40, W: 41
+[0;32mI (58525) HTTP: Data sent successfully: {"r": 276, "s": 0, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 277, S: 0, T: 236, U: 35, V: 40, W: 41
+[0;32mI (60065) HTTP: Data sent successfully: {"r": 277, "s": 0, "t": 236, "u": 35, "v": 40, "w": 41,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 276, S: 0, T: 237, U: 35, V: 40, W: 41
+[0;32mI (61605) HTTP: Data sent successfully: {"r": 276, "s": 0, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 276, S: 0, T: 237, U: 35, V: 40, W: 41
+[0;32mI (63135) HTTP: Data sent successfully: {"r": 276, "s": 0, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 20, S: 255, T: 237, U: 35, V: 40, W: 41
+[0;32mI (64665) HTTP: Data sent successfully: {"r": 20, "s": 255, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 276, S: 0, T: 237, U: 35, V: 40, W: 41
+[0;32mI (66205) HTTP: Data sent successfully: {"r": 276, "s": 0, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 276, S: 0, T: 237, U: 35, V: 40, W: 41
+[0;32mI (67755) HTTP: Data sent successfully: {"r": 276, "s": 0, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 276, S: 0, T: 237, U: 35, V: 40, W: 41
+[0;32mI (69285) HTTP: Data sent successfully: {"r": 276, "s": 0, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 276, S: 0, T: 237, U: 35, V: 40, W: 41
+[0;32mI (70815) HTTP: Data sent successfully: {"r": 276, "s": 0, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 276, S: 0, T: 237, U: 35, V: 40, W: 41
+[0;32mI (72355) HTTP: Data sent successfully: {"r": 276, "s": 0, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 276, S: 0, T: 237, U: 35, V: 40, W: 41
+[0;32mI (73885) HTTP: Data sent successfully: {"r": 276, "s": 0, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 276, S: 0, T: 237, U: 35, V: 40, W: 41
+[0;32mI (75425) HTTP: Data sent successfully: {"r": 276, "s": 0, "t": 237, "u": 35, "v": 40, "w": 41,"temperature": 30}[0m
+Temperatura del sensor: 29 °C
+R: 20, S: 255, T: 236, U: 35, V: 40, W: 41
+[0;32mI (77265) HTTP: Data sent successfully: {"r": 20, "s": 255, "t": 236, "u": 35, "v": 40, "w": 41,"temperature": 29}[0m
+Temperatura del sensor: 29 °C
+R: 20, S: 255, T: 236, U: 35, V: 40, W: 41
+[0;32mI (78805) HTTP: Data sent successfully: {"r": 20, "s": 255, "t": 236, "u": 35, "v": 40, "w": 41,"temperature": 29}[0m
+Temperatura del sensor: 29 °C
+R: 20, S: 255, T: 236, U: 35, V: 40, W: 41
+[0;32mI (80345) HTTP: Data sent successfully: {"r": 20, "s": 255, "t": 236, "u": 35, "v": 40, "w": 41,"temperature": 29}[0m
+Temperatura del sensor: 30 °C
+R: 20, S: 254, T: 236, U: 35, V: 40, W: 41
+[0;32mI (81875) HTTP: Data sent successfully: {"r": 20, "s": 254, "t": 236, "u": 35, "v": 40, "w": 41,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 20, S: 255, T: 236, U: 35, V: 40, W: 41
+[0;32mI (83725) HTTP: Data sent successfully: {"r": 20, "s": 255, "t": 236, "u": 35, "v": 40, "w": 41,"temperature": 30}[0m
+Temperatura del sensor: 29 °C
+R: 20, S: 255, T: 236, U: 35, V: 40, W: 41
+[0;32mI (85255) HTTP: Data sent successfully: {"r": 20, "s": 255, "t": 236, "u": 35, "v": 40, "w": 41,"temperature": 29}[0m
+Temperatura del sensor: 29 °C
+R: 20, S: 254, T: 236, U: 35, V: 40, W: 41
+[0;32mI (87095) HTTP: Data sent successfully: {"r": 20, "s": 254, "t": 236, "u": 35, "v": 40, "w": 41,"temperature": 29}[0m
+Temperatura del sensor: 29 °C
+R: 20, S: 254, T: 236, U: 35, V: 40, W: 41
+[0;32mI (88635) HTTP: Data sent successfully: {"r": 20, "s": 254, "t": 236, "u": 35, "v": 40, "w": 41,"temperature": 29}[0m
+Temperatura del sensor: 29 °C
+R: 20, S: 254, T: 236, U: 35, V: 40, W: 41
+[0;32mI (90165) HTTP: Data sent successfully: {"r": 20, "s": 254, "t": 236, "u": 35, "v": 40, "w": 41,"temperature": 29}[0m
+Temperatura del sensor: 29 °C
+R: 20, S: 254, T: 236, U: 35, V: 40, W: 41
+[0;32mI (91705) HTTP: Data sent successfully: {"r": 20, "s": 254, "t": 236, "u": 35, "v": 40, "w": 41,"temperature": 29}[0m
+Temperatura del sensor: 29 °C
+R: 20, S: 254, T: 236, U: 35, V: 40, W: 41
+[0;32mI (93245) HTTP: Data sent successfully: {"r": 20, "s": 254, "t": 236, "u": 35, "v": 40, "w": 41,"temperature": 29}[0m
+Temperatura del sensor: 29 °C
+R: 20, S: 254, T: 236, U: 35, V: 40, W: 41
+[0;32mI (94785) HTTP: Data sent successfully: {"r": 20, "s": 254, "t": 236, "u": 35, "v": 40, "w": 41,"temperature": 29}[0m
+Temperatura del sensor: 29 °C
+R: 20, S: 254, T: 236, U: 34, V: 40, W: 41
+[0;32mI (96625) HTTP: Data sent successfully: {"r": 20, "s": 254, "t": 236, "u": 34, "v": 40, "w": 41,"temperature": 29}[0m
+Temperatura del sensor: 29 °C
+R: 20, S: 254, T: 236, U: 34, V: 40, W: 41
+[0;32mI (98175) HTTP: Data sent successfully: {"r": 20, "s": 254, "t": 236, "u": 34, "v": 40, "w": 41,"temperature": 29}[0m
+Temperatura del sensor: 29 °C
+R: 20, S: 253, T: 236, U: 35, V: 40, W: 41
+[0;32mI (99995) HTTP: Data sent successfully: {"r": 20, "s": 253, "t": 236, "u": 35, "v": 40, "w": 41,"temperature": 29}[0m
+Temperatura del sensor: 29 °C
+R: 20, S: 254, T: 236, U: 35, V: 40, W: 41
+[0;32mI (101535) HTTP: Data sent successfully: {"r": 20, "s": 254, "t": 236, "u": 35, "v": 40, "w": 41,"temperature": 29}[0m
+Temperatura del sensor: 29 °C
+R: 20, S: 254, T: 236, U: 35, V: 40, W: 41
+[0;32mI (103075) HTTP: Data sent successfully: {"r": 20, "s": 254, "t": 236, "u": 35, "v": 40, "w": 41,"temperature": 29}[0m
+Temperatura del sensor: 29 °C
+R: 20, S: 254, T: 236, U: 35, V: 40, W: 41
+[0;32mI (104615) HTTP: Data sent successfully: {"r": 20, "s": 254, "t": 236, "u": 35, "v": 40, "w": 41,"temperature": 29}[0m
+Temperatura del sensor: 29 °C
+R: 20, S: 255, T: 236, U: 35, V: 40, W: 41
+[0;32mI (106145) HTTP: Data sent successfully: {"r": 20, "s": 255, "t": 236, "u": 35, "v": 40, "w": 41,"temperature": 29}[0m
+Temperatura del sensor: 29 °C
+R: 21, S: 254, T: 236, U: 35, V: 40, W: 41

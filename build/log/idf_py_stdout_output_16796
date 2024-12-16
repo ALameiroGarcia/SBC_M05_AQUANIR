@@ -1,0 +1,118 @@
+[0;32mI (39) boo�ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (30) boot: ESP-IDF GIT-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Dec  4 2024 12:30:33[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=268b8h (157880) map[0m
+[0;32mI (158) esp_image: segment 1: paddr=000368e0 vaddr=3ffb0000 size=03fech ( 16364) load[0m
+[0;32mI (165) esp_image: segment 2: paddr=0003a8d4 vaddr=40080000 size=05744h ( 22340) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9e314h (647956) map[0m
+[0;32mI (396) esp_image: segment 4: paddr=000de33c vaddr=40085744 size=13204h ( 78340) load[0m
+[0;32mI (439) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (439) boot: Disabling RNG early entropy source...[0m
+[0;32mI (451) cpu_start: Multicore app[0m
+[0;32mI (459) cpu_start: Pro cpu start user code[0m
+[0;32mI (459) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (460) cpu_start: Application information:[0m
+[0;32mI (462) cpu_start: Project name:     app-template[0m
+[0;32mI (468) cpu_start: App version:      1[0m
+[0;32mI (472) cpu_start: Compile time:     Dec  4 2024 12:30:30[0m
+[0;32mI (478) cpu_start: ELF file SHA256:  1fd7967c7...[0m
+[0;32mI (484) cpu_start: ESP-IDF:          GIT-NOTFOUND[0m
+[0;32mI (489) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (494) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (499) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (504) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (511) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (517) heap_init: At 3FFB86A8 len 00027958 (158 KiB): DRAM[0m
+[0;32mI (523) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (529) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (536) heap_init: At 40098948 len 000076B8 (29 KiB): IRAM[0m
+[0;32mI (543) spi_flash: detected chip: generic[0m
+[0;32mI (547) spi_flash: flash io: dio[0m
+[0;33mW (550) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (564) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (575) main_task: Started on CPU0[0m
+[0;32mI (585) main_task: Calling app_main()[0m
+[0;32mI (585) SSD1306: Legacy i2c driver is used[0m
+[0;32mI (585) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (645) SSD1306: Panel is 128x64[0m
+[0;32mI (645) SSD1306: OLED configured successfully[0m
+Escaneando el bus I2C...
+Dispositivo encontrado en dirección: 0x3C
+Dispositivo encontrado en dirección: 0x49
+Escaneo finalizado.
+[0;32mI (735) wifi:wifi driver task: 3ffc0840, prio:23, stack:6656, core=0[0m
+[0;32mI (765) wifi:wifi firmware version: 3e0076f[0m
+[0;32mI (765) wifi:wifi certification version: v7.0[0m
+[0;32mI (765) wifi:config NVS flash: enabled[0m
+[0;32mI (765) wifi:config nano formating: disabled[0m
+[0;32mI (765) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (775) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (775) wifi:Init management short buffer num: 32[0m
+[0;32mI (775) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (785) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (785) wifi:Init static rx buffer num: 10[0m
+[0;32mI (795) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (795) wifi_init: rx ba win: 6[0m
+[0;32mI (795) wifi_init: tcpip mbox: 32[0m
+[0;32mI (805) wifi_init: udp mbox: 6[0m
+[0;32mI (805) wifi_init: tcp mbox: 6[0m
+[0;32mI (815) wifi_init: tcp tx win: 5760[0m
+[0;32mI (815) wifi_init: tcp rx win: 5760[0m
+[0;32mI (815) wifi_init: tcp mss: 1440[0m
+[0;32mI (825) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (825) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (835) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+[0;32mI (915) wifi:mode : sta (24:6f:28:7c:0b:88)[0m
+[0;32mI (925) wifi:enable tsf[0m
+[0;32mI (925) wifi_Aquanir: Conectando al SSID: SBC...[0m
+[0;32mI (935) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (935) wifi:state: init -> auth (b0)[0m
+[0;32mI (935) wifi:state: auth -> assoc (0)[0m
+[0;32mI (945) wifi:state: assoc -> run (10)[0m
+[0;32mI (955) wifi:<ba-add>idx:0 (ifx:0, 70:4d:7b:8c:a3:b8), tid:0, ssn:0, winSize:64[0m
+[0;32mI (975) wifi:connected with SBC, aid = 3, channel 6, BW20, bssid = 70:4d:7b:8c:a3:b8[0m
+[0;32mI (975) wifi:security: WPA2-PSK, phy: bgn, rssi: -54[0m
+[0;32mI (985) wifi:pm start, type: 1[0m
+
+[0;32mI (985) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1055) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (2495) esp_netif_handlers: sta ip: 192.168.1.187, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2495) wifi_Aquanir: Conectado! IP Address: 192.168.1.187[0m
+Temperatura del sensor: 0 °C
+R: 5405, S: 257, T: 23296, U: 3584, V: 3840, W: 3328
+[0;32mI (3525) HTTP: Data sent successfully: {"r": 5405, "s": 257, "t": 23296, "u": 3584, "v": 3840, "w": 3328,"temperature": 0}[0m
+Temperatura del sensor: 0 °C
+R: 5405, S: 31490, T: 21248, U: 4608, V: 3584, W: 4864
+[0;32mI (5365) HTTP: Data sent successfully: {"r": 5405, "s": 31490, "t": 21248, "u": 4608, "v": 3584, "w": 4864,"temperature": 0}[0m
+Temperatura del sensor: 0 °C
+R: 4125, S: 257, T: 60672, U: 8960, V: 10240, W: 10496
+[0;32mI (7205) HTTP: Data sent successfully: {"r": 4125, "s": 257, "t": 60672, "u": 8960, "v": 10240, "w": 10496,"temperature": 0}[0m
+Temperatura del sensor: 0 °C
+R: 5405, S: 58112, T: 60672, U: 7936, V: 8704, W: 10496
+[0;32mI (9055) HTTP: Data sent successfully: {"r": 5405, "s": 58112, "t": 60672, "u": 7936, "v": 8704, "w": 10496,"temperature": 0}[0m
+Temperatura del sensor: 0 °C
+R: 4381, S: 52480, T: 60672, U: 8960, V: 10240, W: 10496
+[0;32mI (10895) HTTP: Data sent successfully: {"r": 4381, "s": 52480, "t": 60672, "u": 8960, "v": 10240, "w": 10496,"temperature": 0}[0m

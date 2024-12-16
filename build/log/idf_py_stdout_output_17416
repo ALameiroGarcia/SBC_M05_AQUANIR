@@ -1,0 +1,745 @@
+0;32mI (39) boot.esp32: SPI ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (30) boot: ESP-IDF GIT-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Dec  4 2024 12:30:33[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=268b8h (157880) map[0m
+[0;32mI (158) esp_image: segment 1: paddr=000368e0 vaddr=3ffb0000 size=03fech ( 16364) load[0m
+[0;32mI (164) esp_image: segment 2: paddr=0003a8d4 vaddr=40080000 size=05744h ( 22340) load[0m
+[0;32mI (173) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9e314h (647956) map[0m
+[0;32mI (396) esp_image: segment 4: paddr=000de33c vaddr=40085744 size=13204h ( 78340) load[0m
+[0;32mI (439) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (439) boot: Disabling RNG early entropy source...[0m
+[0;32mI (451) cpu_start: Multicore app[0m
+[0;32mI (459) cpu_start: Pro cpu start user code[0m
+[0;32mI (459) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (459) cpu_start: Application information:[0m
+[0;32mI (462) cpu_start: Project name:     app-template[0m
+[0;32mI (468) cpu_start: App version:      1[0m
+[0;32mI (472) cpu_start: Compile time:     Dec  4 2024 12:30:30[0m
+[0;32mI (478) cpu_start: ELF file SHA256:  2372e4a1a...[0m
+[0;32mI (484) cpu_start: ESP-IDF:          GIT-NOTFOUND[0m
+[0;32mI (489) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (494) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (499) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (504) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (511) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (517) heap_init: At 3FFB86A8 len 00027958 (158 KiB): DRAM[0m
+[0;32mI (523) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (529) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (536) heap_init: At 40098948 len 000076B8 (29 KiB): IRAM[0m
+[0;32mI (543) spi_flash: detected chip: generic[0m
+[0;32mI (546) spi_flash: flash io: dio[0m
+[0;33mW (550) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (564) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (575) main_task: Started on CPU0[0m
+[0;32mI (585) main_task: Calling app_main()[0m
+[0;32mI (655) wifi:wifi driver task: 3ffc06f4, prio:23, stack:6656, core=0[0m
+[0;32mI (685) wifi:wifi firmware version: 3e0076f[0m
+[0;32mI (685) wifi:wifi certification version: v7.0[0m
+[0;32mI (685) wifi:config NVS flash: enabled[0m
+[0;32mI (685) wifi:config nano formating: disabled[0m
+[0;32mI (685) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (695) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (695) wifi:Init management short buffer num: 32[0m
+[0;32mI (695) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (705) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (705) wifi:Init static rx buffer num: 10[0m
+[0;32mI (715) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (715) wifi_init: rx ba win: 6[0m
+[0;32mI (715) wifi_init: tcpip mbox: 32[0m
+[0;32mI (725) wifi_init: udp mbox: 6[0m
+[0;32mI (725) wifi_init: tcp mbox: 6[0m
+[0;32mI (735) wifi_init: tcp tx win: 5760[0m
+[0;32mI (735) wifi_init: tcp rx win: 5760[0m
+[0;32mI (735) wifi_init: tcp mss: 1440[0m
+[0;32mI (745) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (745) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (755) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+[0;32mI (845) wifi:mode : sta (24:6f:28:7c:0b:88)[0m
+[0;32mI (845) wifi:enable tsf[0m
+[0;32mI (845) wifi_Aquanir: Conectando al SSID: SBC...[0m
+[0;32mI (865) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (865) wifi:state: init -> auth (b0)[0m
+[0;32mI (865) wifi:state: auth -> assoc (0)[0m
+[0;32mI (875) wifi:state: assoc -> run (10)[0m
+[0;32mI (895) wifi:<ba-add>idx:0 (ifx:0, 70:4d:7b:8c:a3:b8), tid:0, ssn:0, winSize:64[0m
+[0;32mI (925) wifi:connected with SBC, aid = 8, channel 6, BW20, bssid = 70:4d:7b:8c:a3:b8[0m
+[0;32mI (925) wifi:security: WPA2-PSK, phy: bgn, rssi: -57[0m
+[0;32mI (935) wifi:pm start, type: 1[0m
+
+[0;32mI (935) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (955) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (2445) esp_netif_handlers: sta ip: 192.168.1.187, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2445) wifi_Aquanir: Conectado! IP Address: 192.168.1.187[0m
+[0;32mI (2845) SSD1306: Legacy i2c driver is used[0m
+[0;32mI (2845) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (2895) SSD1306: Panel is 128x64[0m
+[0;32mI (2895) SSD1306: OLED configured successfully[0m
+Escaneando el bus I2C...
+Dispositivo encontrado en dirección: 0x3C
+Dispositivo encontrado en dirección: 0x49
+Escaneo finalizado.
+Temperatura del sensor: 26 °C
+R: 1, S: 72, T: 6, U: 29, V: 7, W: 2
+[0;32mI (3415) HTTP: Data sent successfully: {"r": 1, "s": 72, "t": 6, "u": 29, "v": 7, "w": 2,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 1, S: 75, T: 7, U: 30, V: 8, W: 3
+[0;32mI (4955) HTTP: Data sent successfully: {"r": 1, "s": 75, "t": 7, "u": 30, "v": 8, "w": 3,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 1, S: 74, T: 7, U: 30, V: 8, W: 3
+[0;32mI (6485) HTTP: Data sent successfully: {"r": 1, "s": 74, "t": 7, "u": 30, "v": 8, "w": 3,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 1, S: 74, T: 7, U: 30, V: 8, W: 3
+[0;32mI (8025) HTTP: Data sent successfully: {"r": 1, "s": 74, "t": 7, "u": 30, "v": 8, "w": 3,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 1, S: 75, T: 7, U: 30, V: 8, W: 3
+[0;32mI (9565) HTTP: Data sent successfully: {"r": 1, "s": 75, "t": 7, "u": 30, "v": 8, "w": 3,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 1, S: 75, T: 8, U: 30, V: 8, W: 3
+[0;32mI (11105) HTTP: Data sent successfully: {"r": 1, "s": 75, "t": 8, "u": 30, "v": 8, "w": 3,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 1, S: 68, T: 8, U: 26, V: 7, W: 3
+[0;32mI (12635) HTTP: Data sent successfully: {"r": 1, "s": 68, "t": 8, "u": 26, "v": 7, "w": 3,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 1, S: 8, T: 3, U: 1, V: 0, W: 1
+[0;32mI (14165) HTTP: Data sent successfully: {"r": 1, "s": 8, "t": 3, "u": 1, "v": 0, "w": 1,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 0, S: 7, T: 2, U: 1, V: 0, W: 1
+[0;32mI (15705) HTTP: Data sent successfully: {"r": 0, "s": 7, "t": 2, "u": 1, "v": 0, "w": 1,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 0, S: 5, T: 2, U: 1, V: 1, W: 1
+[0;32mI (17245) HTTP: Data sent successfully: {"r": 0, "s": 5, "t": 2, "u": 1, "v": 1, "w": 1,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 0, S: 71, T: 3, U: 29, V: 7, W: 1
+[0;32mI (18775) HTTP: Data sent successfully: {"r": 0, "s": 71, "t": 3, "u": 29, "v": 7, "w": 1,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 1, S: 75, T: 7, U: 30, V: 7, W: 2
+[0;32mI (20315) HTTP: Data sent successfully: {"r": 1, "s": 75, "t": 7, "u": 30, "v": 7, "w": 2,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 1, S: 76, T: 7, U: 30, V: 7, W: 2
+[0;32mI (21855) HTTP: Data sent successfully: {"r": 1, "s": 76, "t": 7, "u": 30, "v": 7, "w": 2,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 1, S: 73, T: 3, U: 15, V: 3, W: 1
+[0;32mI (23385) HTTP: Data sent successfully: {"r": 1, "s": 73, "t": 3, "u": 15, "v": 3, "w": 1,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 1, S: 30, T: 4, U: 14, V: 3, W: 2
+[0;32mI (24945) HTTP: Data sent successfully: {"r": 1, "s": 30, "t": 4, "u": 14, "v": 3, "w": 2,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 1, S: 44, T: 6, U: 29, V: 7, W: 2
+[0;32mI (26455) HTTP: Data sent successfully: {"r": 1, "s": 44, "t": 6, "u": 29, "v": 7, "w": 2,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 1, S: 67, T: 3, U: 15, V: 3, W: 1
+[0;32mI (27995) HTTP: Data sent successfully: {"r": 1, "s": 67, "t": 3, "u": 15, "v": 3, "w": 1,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 1, S: 69, T: 7, U: 30, V: 7, W: 3
+[0;32mI (29535) HTTP: Data sent successfully: {"r": 1, "s": 69, "t": 7, "u": 30, "v": 7, "w": 3,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 1, S: 77, T: 7, U: 30, V: 7, W: 3
+[0;32mI (31085) HTTP: Data sent successfully: {"r": 1, "s": 77, "t": 7, "u": 30, "v": 7, "w": 3,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 1, S: 49, T: 6, U: 22, V: 5, W: 2
+[0;32mI (32605) HTTP: Data sent successfully: {"r": 1, "s": 49, "t": 6, "u": 22, "v": 5, "w": 2,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 1, S: 43, T: 5, U: 22, V: 4, W: 2
+[0;32mI (34145) HTTP: Data sent successfully: {"r": 1, "s": 43, "t": 5, "u": 22, "v": 4, "w": 2,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 1, S: 69, T: 4, U: 24, V: 5, W: 2
+[0;32mI (35685) HTTP: Data sent successfully: {"r": 1, "s": 69, "t": 4, "u": 24, "v": 5, "w": 2,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 257, S: 226, T: 6, U: 47, V: 23, W: 2
+[0;32mI (37215) HTTP: Data sent successfully: {"r": 257, "s": 226, "t": 6, "u": 47, "v": 23, "w": 2,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 263, S: 247, T: 41, U: 52, V: 21, W: 23
+[0;32mI (38755) HTTP: Data sent successfully: {"r": 263, "s": 247, "t": 41, "u": 52, "v": 21, "w": 23,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 772, S: 27, T: 79, U: 66, V: 32, W: 47
+[0;32mI (40295) HTTP: Data sent successfully: {"r": 772, "s": 27, "t": 79, "u": 66, "v": 32, "w": 47,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 10, S: 11, T: 6, U: 6, V: 2, W: 1
+[0;32mI (41825) HTTP: Data sent successfully: {"r": 10, "s": 11, "t": 6, "u": 6, "v": 2, "w": 1,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 0, S: 14, T: 4, U: 5, V: 2, W: 1
+[0;32mI (43365) HTTP: Data sent successfully: {"r": 0, "s": 14, "t": 4, "u": 5, "v": 2, "w": 1,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 0, S: 10, T: 4, U: 5, V: 2, W: 1
+[0;32mI (44885) HTTP: Data sent successfully: {"r": 0, "s": 10, "t": 4, "u": 5, "v": 2, "w": 1,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 0, S: 21, T: 8, U: 7, V: 3, W: 1
+[0;32mI (46425) HTTP: Data sent successfully: {"r": 0, "s": 21, "t": 8, "u": 7, "v": 3, "w": 1,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 1, S: 15, T: 3, U: 4, V: 2, W: 1
+[0;32mI (47965) HTTP: Data sent successfully: {"r": 1, "s": 15, "t": 3, "u": 4, "v": 2, "w": 1,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 0, S: 36, T: 15, U: 11, V: 5, W: 3
+[0;32mI (49505) HTTP: Data sent successfully: {"r": 0, "s": 36, "t": 15, "u": 11, "v": 5, "w": 3,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 1, S: 52, T: 28, U: 15, V: 8, W: 7
+[0;32mI (51035) HTTP: Data sent successfully: {"r": 1, "s": 52, "t": 28, "u": 15, "v": 8, "w": 7,"temperature": 26}[0m
+Temperatura del sensor: 25 °C
+R: 1, S: 20, T: 10, U: 3, V: 3, W: 2
+[0;32mI (52575) HTTP: Data sent successfully: {"r": 1, "s": 20, "t": 10, "u": 3, "v": 3, "w": 2,"temperature": 25}[0m
+Temperatura del sensor: 26 °C
+R: 2, S: 71, T: 24, U: 5, V: 5, W: 12
+[0;32mI (54115) HTTP: Data sent successfully: {"r": 2, "s": 71, "t": 24, "u": 5, "v": 5, "w": 12,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 4, S: 159, T: 8, U: 8, V: 4, W: 6
+[0;32mI (55645) HTTP: Data sent successfully: {"r": 4, "s": 159, "t": 8, "u": 8, "v": 4, "w": 6,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 257, S: 0, T: 11, U: 7, V: 4, W: 24
+[0;32mI (57195) HTTP: Data sent successfully: {"r": 257, "s": 0, "t": 11, "u": 7, "v": 4, "w": 24,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 260, S: 23, T: 8, U: 11, V: 7, W: 17
+[0;32mI (58715) HTTP: Data sent successfully: {"r": 260, "s": 23, "t": 8, "u": 11, "v": 7, "w": 17,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 516, S: 220, T: 47, U: 41, V: 28, W: 45
+[0;32mI (60255) HTTP: Data sent successfully: {"r": 516, "s": 220, "t": 47, "u": 41, "v": 28, "w": 45,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 528, S: 221, T: 82, U: 42, V: 28, W: 63
+[0;32mI (61795) HTTP: Data sent successfully: {"r": 528, "s": 221, "t": 82, "u": 42, "v": 28, "w": 63,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 528, S: 226, T: 83, U: 43, V: 28, W: 62
+[0;32mI (63335) HTTP: Data sent successfully: {"r": 528, "s": 226, "t": 83, "u": 43, "v": 28, "w": 62,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 527, S: 227, T: 83, U: 43, V: 29, W: 62
+[0;32mI (64865) HTTP: Data sent successfully: {"r": 527, "s": 227, "t": 83, "u": 43, "v": 29, "w": 62,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 527, S: 229, T: 82, U: 44, V: 29, W: 62
+[0;32mI (66395) HTTP: Data sent successfully: {"r": 527, "s": 229, "t": 82, "u": 44, "v": 29, "w": 62,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 527, S: 233, T: 82, U: 44, V: 29, W: 62
+[0;32mI (68245) HTTP: Data sent successfully: {"r": 527, "s": 233, "t": 82, "u": 44, "v": 29, "w": 62,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 527, S: 233, T: 82, U: 45, V: 29, W: 61
+[0;32mI (70115) HTTP: Data sent successfully: {"r": 527, "s": 233, "t": 82, "u": 45, "v": 29, "w": 61,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 527, S: 231, T: 83, U: 45, V: 29, W: 61
+[0;32mI (71635) HTTP: Data sent successfully: {"r": 527, "s": 231, "t": 83, "u": 45, "v": 29, "w": 61,"temperature": 26}[0m
+Temperatura del sensor: 25 °C
+R: 271, S: 227, T: 82, U: 21, V: 13, W: 59
+[0;32mI (73155) HTTP: Data sent successfully: {"r": 271, "s": 227, "t": 82, "u": 21, "v": 13, "w": 59,"temperature": 25}[0m
+Temperatura del sensor: 25 °C
+R: 10, S: 191, T: 17, U: 12, V: 4, W: 26
+[0;32mI (74685) HTTP: Data sent successfully: {"r": 10, "s": 191, "t": 17, "u": 12, "v": 4, "w": 26,"temperature": 25}[0m
+Temperatura del sensor: 26 °C
+R: 3, S: 36, T: 8, U: 4, V: 2, W: 3
+[0;32mI (76225) HTTP: Data sent successfully: {"r": 3, "s": 36, "t": 8, "u": 4, "v": 2, "w": 3,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 1, S: 26, T: 41, U: 28, V: 14, W: 35
+[0;32mI (77765) HTTP: Data sent successfully: {"r": 1, "s": 26, "t": 41, "u": 28, "v": 14, "w": 35,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 257, S: 137, T: 81, U: 41, V: 28, W: 56
+[0;32mI (79305) HTTP: Data sent successfully: {"r": 257, "s": 137, "t": 81, "u": 41, "v": 28, "w": 56,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 520, S: 142, T: 88, U: 44, V: 30, W: 55
+[0;32mI (80835) HTTP: Data sent successfully: {"r": 520, "s": 142, "t": 88, "u": 44, "v": 30, "w": 55,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 526, S: 141, T: 89, U: 45, V: 30, W: 55
+[0;32mI (82375) HTTP: Data sent successfully: {"r": 526, "s": 141, "t": 89, "u": 45, "v": 30, "w": 55,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 526, S: 141, T: 89, U: 45, V: 30, W: 55
+[0;32mI (83915) HTTP: Data sent successfully: {"r": 526, "s": 141, "t": 89, "u": 45, "v": 30, "w": 55,"temperature": 26}[0m
+Temperatura del sensor: 25 °C
+R: 526, S: 142, T: 88, U: 45, V: 30, W: 55
+[0;32mI (85445) HTTP: Data sent successfully: {"r": 526, "s": 142, "t": 88, "u": 45, "v": 30, "w": 55,"temperature": 25}[0m
+Temperatura del sensor: 25 °C
+R: 526, S: 142, T: 88, U: 45, V: 30, W: 55
+[0;32mI (86975) HTTP: Data sent successfully: {"r": 526, "s": 142, "t": 88, "u": 45, "v": 30, "w": 55,"temperature": 25}[0m
+Temperatura del sensor: 26 °C
+R: 526, S: 142, T: 88, U: 45, V: 30, W: 55
+[0;32mI (88515) HTTP: Data sent successfully: {"r": 526, "s": 142, "t": 88, "u": 45, "v": 30, "w": 55,"temperature": 26}[0m
+Temperatura del sensor: 25 °C
+R: 526, S: 142, T: 89, U: 45, V: 30, W: 55
+[0;32mI (90055) HTTP: Data sent successfully: {"r": 526, "s": 142, "t": 89, "u": 45, "v": 30, "w": 55,"temperature": 25}[0m
+Temperatura del sensor: 26 °C
+R: 526, S: 142, T: 89, U: 45, V: 30, W: 55
+[0;32mI (91595) HTTP: Data sent successfully: {"r": 526, "s": 142, "t": 89, "u": 45, "v": 30, "w": 55,"temperature": 26}[0m
+Temperatura del sensor: 25 °C
+R: 526, S: 142, T: 89, U: 45, V: 30, W: 55
+[0;32mI (93135) HTTP: Data sent successfully: {"r": 526, "s": 142, "t": 89, "u": 45, "v": 30, "w": 55,"temperature": 25}[0m
+Temperatura del sensor: 26 °C
+R: 525, S: 142, T: 89, U: 45, V: 30, W: 55
+[0;32mI (94665) HTTP: Data sent successfully: {"r": 525, "s": 142, "t": 89, "u": 45, "v": 30, "w": 55,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 525, S: 142, T: 89, U: 45, V: 30, W: 55
+[0;32mI (96205) HTTP: Data sent successfully: {"r": 525, "s": 142, "t": 89, "u": 45, "v": 30, "w": 55,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 525, S: 142, T: 88, U: 45, V: 30, W: 55
+[0;32mI (97735) HTTP: Data sent successfully: {"r": 525, "s": 142, "t": 88, "u": 45, "v": 30, "w": 55,"temperature": 26}[0m
+Temperatura del sensor: 25 °C
+R: 525, S: 140, T: 90, U: 45, V: 30, W: 55
+[0;32mI (99275) HTTP: Data sent successfully: {"r": 525, "s": 140, "t": 90, "u": 45, "v": 30, "w": 55,"temperature": 25}[0m
+Temperatura del sensor: 25 °C
+R: 525, S: 142, T: 90, U: 45, V: 30, W: 55
+[0;32mI (100815) HTTP: Data sent successfully: {"r": 525, "s": 142, "t": 90, "u": 45, "v": 30, "w": 55,"temperature": 25}[0m
+Temperatura del sensor: 26 °C
+R: 526, S: 142, T: 90, U: 45, V: 30, W: 55
+[0;32mI (102335) HTTP: Data sent successfully: {"r": 526, "s": 142, "t": 90, "u": 45, "v": 30, "w": 55,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 526, S: 143, T: 90, U: 45, V: 30, W: 55
+[0;32mI (103885) HTTP: Data sent successfully: {"r": 526, "s": 143, "t": 90, "u": 45, "v": 30, "w": 55,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 526, S: 143, T: 90, U: 45, V: 30, W: 55
+[0;32mI (105415) HTTP: Data sent successfully: {"r": 526, "s": 143, "t": 90, "u": 45, "v": 30, "w": 55,"temperature": 26}[0m
+Temperatura del sensor: 25 °C
+R: 526, S: 143, T: 90, U: 45, V: 30, W: 55
+[0;32mI (106965) HTTP: Data sent successfully: {"r": 526, "s": 143, "t": 90, "u": 45, "v": 30, "w": 55,"temperature": 25}[0m
+Temperatura del sensor: 26 °C
+R: 526, S: 143, T: 90, U: 46, V: 30, W: 55
+[0;32mI (108495) HTTP: Data sent successfully: {"r": 526, "s": 143, "t": 90, "u": 46, "v": 30, "w": 55,"temperature": 26}[0m
+Temperatura del sensor: 25 °C
+R: 526, S: 143, T: 90, U: 46, V: 30, W: 55
+[0;32mI (110015) HTTP: Data sent successfully: {"r": 526, "s": 143, "t": 90, "u": 46, "v": 30, "w": 55,"temperature": 25}[0m
+Temperatura del sensor: 25 °C
+R: 526, S: 143, T: 90, U: 46, V: 30, W: 55
+[0;32mI (111555) HTTP: Data sent successfully: {"r": 526, "s": 143, "t": 90, "u": 46, "v": 30, "w": 55,"temperature": 25}[0m
+Temperatura del sensor: 25 °C
+R: 526, S: 143, T: 90, U: 46, V: 30, W: 55
+[0;32mI (113095) HTTP: Data sent successfully: {"r": 526, "s": 143, "t": 90, "u": 46, "v": 30, "w": 55,"temperature": 25}[0m
+Temperatura del sensor: 25 °C
+R: 526, S: 143, T: 90, U: 46, V: 30, W: 55
+[0;32mI (114625) HTTP: Data sent successfully: {"r": 526, "s": 143, "t": 90, "u": 46, "v": 30, "w": 55,"temperature": 25}[0m
+Temperatura del sensor: 25 °C
+R: 526, S: 143, T: 90, U: 46, V: 30, W: 55
+[0;32mI (116165) HTTP: Data sent successfully: {"r": 526, "s": 143, "t": 90, "u": 46, "v": 30, "w": 55,"temperature": 25}[0m
+Temperatura del sensor: 26 °C
+R: 526, S: 143, T: 90, U: 46, V: 30, W: 55
+[0;32mI (117705) HTTP: Data sent successfully: {"r": 526, "s": 143, "t": 90, "u": 46, "v": 30, "w": 55,"temperature": 26}[0m
+Temperatura del sensor: 25 °C
+R: 526, S: 143, T: 90, U: 46, V: 30, W: 55
+[0;32mI (119545) HTTP: Data sent successfully: {"r": 526, "s": 143, "t": 90, "u": 46, "v": 30, "w": 55,"temperature": 25}[0m
+Temperatura del sensor: 26 °C
+R: 526, S: 143, T: 90, U: 46, V: 30, W: 55
+[0;32mI (121085) HTTP: Data sent successfully: {"r": 526, "s": 143, "t": 90, "u": 46, "v": 30, "w": 55,"temperature": 26}[0m
+Temperatura del sensor: 25 °C
+R: 526, S: 143, T: 90, U: 46, V: 30, W: 55
+[0;32mI (122625) HTTP: Data sent successfully: {"r": 526, "s": 143, "t": 90, "u": 46, "v": 30, "w": 55,"temperature": 25}[0m
+Temperatura del sensor: 26 °C
+R: 526, S: 143, T: 90, U: 46, V: 30, W: 55
+[0;32mI (124155) HTTP: Data sent successfully: {"r": 526, "s": 143, "t": 90, "u": 46, "v": 30, "w": 55,"temperature": 26}[0m
+Temperatura del sensor: 25 °C
+R: 526, S: 143, T: 90, U: 46, V: 30, W: 55
+[0;32mI (125685) HTTP: Data sent successfully: {"r": 526, "s": 143, "t": 90, "u": 46, "v": 30, "w": 55,"temperature": 25}[0m
+Temperatura del sensor: 25 °C
+R: 526, S: 143, T: 90, U: 46, V: 30, W: 55
+[0;32mI (127225) HTTP: Data sent successfully: {"r": 526, "s": 143, "t": 90, "u": 46, "v": 30, "w": 55,"temperature": 25}[0m
+Temperatura del sensor: 25 °C
+R: 526, S: 143, T: 90, U: 46, V: 30, W: 55
+[0;32mI (128765) HTTP: Data sent successfully: {"r": 526, "s": 143, "t": 90, "u": 46, "v": 30, "w": 55,"temperature": 25}[0m
+Temperatura del sensor: 25 °C
+R: 526, S: 143, T: 90, U: 46, V: 30, W: 55
+[0;32mI (130295) HTTP: Data sent successfully: {"r": 526, "s": 143, "t": 90, "u": 46, "v": 30, "w": 55,"temperature": 25}[0m
+Temperatura del sensor: 25 °C
+R: 526, S: 143, T: 90, U: 46, V: 30, W: 55
+[0;32mI (131835) HTTP: Data sent successfully: {"r": 526, "s": 143, "t": 90, "u": 46, "v": 30, "w": 55,"temperature": 25}[0m
+Temperatura del sensor: 25 °C
+R: 526, S: 143, T: 90, U: 46, V: 30, W: 55
+[0;32mI (133365) HTTP: Data sent successfully: {"r": 526, "s": 143, "t": 90, "u": 46, "v": 30, "w": 55,"temperature": 25}[0m
+Temperatura del sensor: 25 °C
+R: 526, S: 143, T: 90, U: 46, V: 30, W: 55
+[0;32mI (134905) HTTP: Data sent successfully: {"r": 526, "s": 143, "t": 90, "u": 46, "v": 30, "w": 55,"temperature": 25}[0m
+Temperatura del sensor: 26 °C
+R: 526, S: 144, T: 90, U: 46, V: 30, W: 55
+[0;32mI (136445) HTTP: Data sent successfully: {"r": 526, "s": 144, "t": 90, "u": 46, "v": 30, "w": 55,"temperature": 26}[0m
+Temperatura del sensor: 25 °C
+R: 526, S: 143, T: 90, U: 46, V: 30, W: 55
+[0;32mI (137975) HTTP: Data sent successfully: {"r": 526, "s": 143, "t": 90, "u": 46, "v": 30, "w": 55,"temperature": 25}[0m
+Temperatura del sensor: 25 °C
+R: 526, S: 145, T: 90, U: 46, V: 30, W: 55
+[0;32mI (139515) HTTP: Data sent successfully: {"r": 526, "s": 145, "t": 90, "u": 46, "v": 30, "w": 55,"temperature": 25}[0m
+Temperatura del sensor: 26 °C
+R: 526, S: 145, T: 90, U: 46, V: 30, W: 55
+[0;32mI (141045) HTTP: Data sent successfully: {"r": 526, "s": 145, "t": 90, "u": 46, "v": 30, "w": 55,"temperature": 26}[0m
+Temperatura del sensor: 25 °C
+R: 526, S: 145, T: 90, U: 46, V: 30, W: 55
+[0;32mI (142595) HTTP: Data sent successfully: {"r": 526, "s": 145, "t": 90, "u": 46, "v": 30, "w": 55,"temperature": 25}[0m
+Temperatura del sensor: 25 °C
+R: 526, S: 145, T: 90, U: 46, V: 30, W: 55
+[0;32mI (144125) HTTP: Data sent successfully: {"r": 526, "s": 145, "t": 90, "u": 46, "v": 30, "w": 55,"temperature": 25}[0m
+Temperatura del sensor: 25 °C
+R: 526, S: 145, T: 90, U: 46, V: 30, W: 54
+[0;32mI (145665) HTTP: Data sent successfully: {"r": 526, "s": 145, "t": 90, "u": 46, "v": 30, "w": 54,"temperature": 25}[0m
+Temperatura del sensor: 25 °C
+R: 526, S: 145, T: 90, U: 46, V: 30, W: 55
+[0;32mI (147195) HTTP: Data sent successfully: {"r": 526, "s": 145, "t": 90, "u": 46, "v": 30, "w": 55,"temperature": 25}[0m
+Temperatura del sensor: 25 °C
+R: 526, S: 145, T: 90, U: 46, V: 30, W: 54
+[0;32mI (148725) HTTP: Data sent successfully: {"r": 526, "s": 145, "t": 90, "u": 46, "v": 30, "w": 54,"temperature": 25}[0m
+Temperatura del sensor: 25 °C
+R: 526, S: 145, T: 90, U: 46, V: 30, W: 54
+[0;32mI (150295) HTTP: Data sent successfully: {"r": 526, "s": 145, "t": 90, "u": 46, "v": 30, "w": 54,"temperature": 25}[0m
+Temperatura del sensor: 25 °C
+R: 526, S: 144, T: 90, U: 46, V: 30, W: 54
+[0;32mI (151805) HTTP: Data sent successfully: {"r": 526, "s": 144, "t": 90, "u": 46, "v": 30, "w": 54,"temperature": 25}[0m
+Temperatura del sensor: 26 °C
+R: 526, S: 144, T: 90, U: 46, V: 30, W: 54
+[0;32mI (153345) HTTP: Data sent successfully: {"r": 526, "s": 144, "t": 90, "u": 46, "v": 30, "w": 54,"temperature": 26}[0m
+Temperatura del sensor: 25 °C
+R: 526, S: 143, T: 90, U: 46, V: 30, W: 54
+[0;32mI (154875) HTTP: Data sent successfully: {"r": 526, "s": 143, "t": 90, "u": 46, "v": 30, "w": 54,"temperature": 25}[0m
+Temperatura del sensor: 25 °C
+R: 526, S: 144, T: 90, U: 46, V: 30, W: 54
+[0;32mI (156415) HTTP: Data sent successfully: {"r": 526, "s": 144, "t": 90, "u": 46, "v": 30, "w": 54,"temperature": 25}[0m
+Temperatura del sensor: 25 °C
+R: 526, S: 144, T: 90, U: 46, V: 30, W: 55
+[0;32mI (157945) HTTP: Data sent successfully: {"r": 526, "s": 144, "t": 90, "u": 46, "v": 30, "w": 55,"temperature": 25}[0m
+Temperatura del sensor: 25 °C
+R: 526, S: 144, T: 90, U: 46, V: 30, W: 54
+[0;32mI (159485) HTTP: Data sent successfully: {"r": 526, "s": 144, "t": 90, "u": 46, "v": 30, "w": 54,"temperature": 25}[0m
+Temperatura del sensor: 25 °C
+R: 526, S: 142, T: 90, U: 46, V: 30, W: 54
+[0;32mI (161025) HTTP: Data sent successfully: {"r": 526, "s": 142, "t": 90, "u": 46, "v": 30, "w": 54,"temperature": 25}[0m
+Temperatura del sensor: 25 °C
+R: 526, S: 143, T: 57, U: 29, V: 20, W: 48
+[0;32mI (162555) HTTP: Data sent successfully: {"r": 526, "s": 143, "t": 57, "u": 29, "v": 20, "w": 48,"temperature": 25}[0m
+Temperatura del sensor: 25 °C
+R: 14, S: 42, T: 3, U: 1, V: 1, W: 1
+[0;32mI (164085) HTTP: Data sent successfully: {"r": 14, "s": 42, "t": 3, "u": 1, "v": 1, "w": 1,"temperature": 25}[0m
+Temperatura del sensor: 25 °C
+R: 1, S: 21, T: 2, U: 2, V: 1, W: 1
+[0;32mI (165625) HTTP: Data sent successfully: {"r": 1, "s": 21, "t": 2, "u": 2, "v": 1, "w": 1,"temperature": 25}[0m
+Temperatura del sensor: 25 °C
+R: 1, S: 26, T: 4, U: 2, V: 1, W: 2
+[0;32mI (167165) HTTP: Data sent successfully: {"r": 1, "s": 26, "t": 4, "u": 2, "v": 1, "w": 2,"temperature": 25}[0m
+Temperatura del sensor: 25 °C
+R: 1, S: 21, T: 4, U: 12, V: 2, W: 2
+[0;32mI (168695) HTTP: Data sent successfully: {"r": 1, "s": 21, "t": 4, "u": 12, "v": 2, "w": 2,"temperature": 25}[0m
+Temperatura del sensor: 26 °C
+R: 1, S: 14, T: 14, U: 3, V: 2, W: 3
+[0;32mI (170235) HTTP: Data sent successfully: {"r": 1, "s": 14, "t": 14, "u": 3, "v": 2, "w": 3,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 1, S: 212, T: 46, U: 16, V: 10, W: 19
+[0;32mI (171775) HTTP: Data sent successfully: {"r": 1, "s": 212, "t": 46, "u": 16, "v": 10, "w": 19,"temperature": 26}[0m
+Temperatura del sensor: 26 °C
+R: 7, S: 229, T: 48, U: 17, V: 11, W: 20
+[0;32mI (173615) HTTP: Data sent successfully: {"r": 7, "s": 229, "t": 48, "u": 17, "v": 11, "w": 20,"temperature": 26}[0m
+Temperatura del sensor: 27 °C
+R: 8, S: 254, T: 52, U: 20, V: 12, W: 23
+[0;32mI (175155) HTTP: Data sent successfully: {"r": 8, "s": 254, "t": 52, "u": 20, "v": 12, "w": 23,"temperature": 27}[0m
+Temperatura del sensor: 27 °C
+R: 264, S: 12, T: 52, U: 21, V: 13, W: 23
+[0;32mI (176685) HTTP: Data sent successfully: {"r": 264, "s": 12, "t": 52, "u": 21, "v": 13, "w": 23,"temperature": 27}[0m
+Temperatura del sensor: 27 °C
+R: 264, S: 187, T: 58, U: 24, V: 15, W: 26
+[0;32mI (178225) HTTP: Data sent successfully: {"r": 264, "s": 187, "t": 58, "u": 24, "v": 15, "w": 26,"temperature": 27}[0m
+Temperatura del sensor: 27 °C
+R: 266, S: 79, T: 42, U: 21, V: 13, W: 24
+[0;32mI (179755) HTTP: Data sent successfully: {"r": 266, "s": 79, "t": 42, "u": 21, "v": 13, "w": 24,"temperature": 27}[0m
+Temperatura del sensor: 27 °C
+R: 262, S: 8, T: 42, U: 22, V: 13, W: 18
+[0;32mI (181605) HTTP: Data sent successfully: {"r": 262, "s": 8, "t": 42, "u": 22, "v": 13, "w": 18,"temperature": 27}[0m
+Temperatura del sensor: 27 °C
+R: 6, S: 228, T: 50, U: 24, V: 15, W: 18
+[0;32mI (183135) HTTP: Data sent successfully: {"r": 6, "s": 228, "t": 50, "u": 24, "v": 15, "w": 18,"temperature": 27}[0m
+Temperatura del sensor: 28 °C
+R: 5, S: 242, T: 64, U: 26, V: 19, W: 21
+[0;32mI (184675) HTTP: Data sent successfully: {"r": 5, "s": 242, "t": 64, "u": 26, "v": 19, "w": 21,"temperature": 28}[0m
+Temperatura del sensor: 28 °C
+R: 8, S: 227, T: 55, U: 21, V: 14, W: 19
+[0;32mI (186215) HTTP: Data sent successfully: {"r": 8, "s": 227, "t": 55, "u": 21, "v": 14, "w": 19,"temperature": 28}[0m
+Temperatura del sensor: 28 °C
+R: 262, S: 6, T: 44, U: 24, V: 15, W: 17
+[0;32mI (187745) HTTP: Data sent successfully: {"r": 262, "s": 6, "t": 44, "u": 24, "v": 15, "w": 17,"temperature": 28}[0m
+Temperatura del sensor: 28 °C
+R: 262, S: 49, T: 49, U: 20, V: 14, W: 26
+[0;32mI (189285) HTTP: Data sent successfully: {"r": 262, "s": 49, "t": 49, "u": 20, "v": 14, "w": 26,"temperature": 28}[0m
+Temperatura del sensor: 28 °C
+R: 265, S: 61, T: 52, U: 21, V: 14, W: 25
+[0;32mI (190815) HTTP: Data sent successfully: {"r": 265, "s": 61, "t": 52, "u": 21, "v": 14, "w": 25,"temperature": 28}[0m
+Temperatura del sensor: 28 °C
+R: 265, S: 84, T: 69, U: 23, V: 15, W: 29
+[0;32mI (192675) HTTP: Data sent successfully: {"r": 265, "s": 84, "t": 69, "u": 23, "v": 15, "w": 29,"temperature": 28}[0m
+Temperatura del sensor: 28 °C
+R: 265, S: 54, T: 69, U: 22, V: 15, W: 28
+[0;32mI (194195) HTTP: Data sent successfully: {"r": 265, "s": 54, "t": 69, "u": 22, "v": 15, "w": 28,"temperature": 28}[0m
+Temperatura del sensor: 29 °C
+R: 266, S: 70, T: 80, U: 28, V: 18, W: 33
+[0;32mI (195735) HTTP: Data sent successfully: {"r": 266, "s": 70, "t": 80, "u": 28, "v": 18, "w": 33,"temperature": 29}[0m
+Temperatura del sensor: 29 °C
+R: 266, S: 129, T: 79, U: 30, V: 18, W: 34
+[0;32mI (197575) HTTP: Data sent successfully: {"r": 266, "s": 129, "t": 79, "u": 30, "v": 18, "w": 34,"temperature": 29}[0m
+Temperatura del sensor: 29 °C
+R: 268, S: 128, T: 75, U: 30, V: 18, W: 34
+[0;32mI (199115) HTTP: Data sent successfully: {"r": 268, "s": 128, "t": 75, "u": 30, "v": 18, "w": 34,"temperature": 29}[0m
+Temperatura del sensor: 29 °C
+R: 269, S: 128, T: 77, U: 30, V: 19, W: 34
+[0;32mI (200655) HTTP: Data sent successfully: {"r": 269, "s": 128, "t": 77, "u": 30, "v": 19, "w": 34,"temperature": 29}[0m
+Temperatura del sensor: 29 °C
+R: 269, S: 128, T: 78, U: 30, V: 19, W: 34
+[0;32mI (202185) HTTP: Data sent successfully: {"r": 269, "s": 128, "t": 78, "u": 30, "v": 19, "w": 34,"temperature": 29}[0m
+Temperatura del sensor: 29 °C
+R: 269, S: 127, T: 80, U: 30, V: 19, W: 34
+[0;32mI (203715) HTTP: Data sent successfully: {"r": 269, "s": 127, "t": 80, "u": 30, "v": 19, "w": 34,"temperature": 29}[0m
+Temperatura del sensor: 29 °C
+R: 270, S: 126, T: 81, U: 30, V: 19, W: 34
+[0;32mI (205265) HTTP: Data sent successfully: {"r": 270, "s": 126, "t": 81, "u": 30, "v": 19, "w": 34,"temperature": 29}[0m
+Temperatura del sensor: 29 °C
+R: 270, S: 128, T: 82, U: 30, V: 19, W: 34
+[0;32mI (206795) HTTP: Data sent successfully: {"r": 270, "s": 128, "t": 82, "u": 30, "v": 19, "w": 34,"temperature": 29}[0m
+Temperatura del sensor: 29 °C
+R: 270, S: 98, T: 71, U: 28, V: 18, W: 32
+[0;32mI (208955) HTTP: Data sent successfully: {"r": 270, "s": 98, "t": 71, "u": 28, "v": 18, "w": 32,"temperature": 29}[0m
+Temperatura del sensor: 29 °C
+R: 268, S: 102, T: 73, U: 28, V: 18, W: 32
+[0;32mI (210485) HTTP: Data sent successfully: {"r": 268, "s": 102, "t": 73, "u": 28, "v": 18, "w": 32,"temperature": 29}[0m
+Temperatura del sensor: 30 °C
+R: 268, S: 106, T: 70, U: 28, V: 18, W: 32
+[0;32mI (212025) HTTP: Data sent successfully: {"r": 268, "s": 106, "t": 70, "u": 28, "v": 18, "w": 32,"temperature": 30}[0m
+Temperatura del sensor: 29 °C
+R: 269, S: 109, T: 72, U: 28, V: 18, W: 32
+[0;32mI (213565) HTTP: Data sent successfully: {"r": 269, "s": 109, "t": 72, "u": 28, "v": 18, "w": 32,"temperature": 29}[0m
+Temperatura del sensor: 30 °C
+R: 269, S: 99, T: 72, U: 27, V: 17, W: 32
+[0;32mI (215095) HTTP: Data sent successfully: {"r": 269, "s": 99, "t": 72, "u": 27, "v": 17, "w": 32,"temperature": 30}[0m
+Temperatura del sensor: 29 °C
+R: 268, S: 84, T: 63, U: 25, V: 16, W: 31
+[0;32mI (216635) HTTP: Data sent successfully: {"r": 268, "s": 84, "t": 63, "u": 25, "v": 16, "w": 31,"temperature": 29}[0m
+Temperatura del sensor: 29 °C
+R: 267, S: 90, T: 61, U: 25, V: 16, W: 31
+[0;32mI (218165) HTTP: Data sent successfully: {"r": 267, "s": 90, "t": 61, "u": 25, "v": 16, "w": 31,"temperature": 29}[0m
+Temperatura del sensor: 30 °C
+R: 267, S: 81, T: 62, U: 24, V: 16, W: 31
+[0;32mI (219695) HTTP: Data sent successfully: {"r": 267, "s": 81, "t": 62, "u": 24, "v": 16, "w": 31,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 267, S: 79, T: 63, U: 23, V: 16, W: 31
+[0;32mI (221235) HTTP: Data sent successfully: {"r": 267, "s": 79, "t": 63, "u": 23, "v": 16, "w": 31,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 267, S: 79, T: 61, U: 23, V: 16, W: 30
+[0;32mI (222765) HTTP: Data sent successfully: {"r": 267, "s": 79, "t": 61, "u": 23, "v": 16, "w": 30,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 267, S: 71, T: 61, U: 23, V: 15, W: 30
+[0;32mI (224305) HTTP: Data sent successfully: {"r": 267, "s": 71, "t": 61, "u": 23, "v": 15, "w": 30,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 267, S: 72, T: 61, U: 23, V: 15, W: 30
+[0;32mI (226145) HTTP: Data sent successfully: {"r": 267, "s": 72, "t": 61, "u": 23, "v": 15, "w": 30,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 267, S: 43, T: 51, U: 20, V: 13, W: 27
+[0;32mI (227695) HTTP: Data sent successfully: {"r": 267, "s": 43, "t": 51, "u": 20, "v": 13, "w": 27,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 9, S: 244, T: 53, U: 18, V: 12, W: 27
+[0;32mI (229215) HTTP: Data sent successfully: {"r": 9, "s": 244, "t": 53, "u": 18, "v": 12, "w": 27,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 6, S: 175, T: 29, U: 14, V: 9, W: 14
+[0;32mI (230755) HTTP: Data sent successfully: {"r": 6, "s": 175, "t": 29, "u": 14, "v": 9, "w": 14,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 3, S: 190, T: 25, U: 14, V: 9, W: 14
+[0;32mI (232295) HTTP: Data sent successfully: {"r": 3, "s": 190, "t": 25, "u": 14, "v": 9, "w": 14,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 3, S: 195, T: 26, U: 14, V: 9, W: 15
+[0;32mI (233825) HTTP: Data sent successfully: {"r": 3, "s": 195, "t": 26, "u": 14, "v": 9, "w": 15,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 3, S: 162, T: 24, U: 12, V: 8, W: 14
+[0;32mI (235365) HTTP: Data sent successfully: {"r": 3, "s": 162, "t": 24, "u": 12, "v": 8, "w": 14,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 3, S: 126, T: 19, U: 10, V: 7, W: 13
+[0;32mI (236905) HTTP: Data sent successfully: {"r": 3, "s": 126, "t": 19, "u": 10, "v": 7, "w": 13,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 2, S: 139, T: 15, U: 11, V: 8, W: 11
+[0;32mI (238435) HTTP: Data sent successfully: {"r": 2, "s": 139, "t": 15, "u": 11, "v": 8, "w": 11,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 3, S: 168, T: 42, U: 14, V: 10, W: 15
+[0;32mI (239965) HTTP: Data sent successfully: {"r": 3, "s": 168, "t": 42, "u": 14, "v": 10, "w": 15,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 6, S: 169, T: 40, U: 13, V: 10, W: 15
+[0;32mI (241515) HTTP: Data sent successfully: {"r": 6, "s": 169, "t": 40, "u": 13, "v": 10, "w": 15,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 6, S: 166, T: 40, U: 13, V: 10, W: 15
+[0;32mI (243045) HTTP: Data sent successfully: {"r": 6, "s": 166, "t": 40, "u": 13, "v": 10, "w": 15,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 6, S: 170, T: 35, U: 13, V: 9, W: 14
+[0;32mI (244575) HTTP: Data sent successfully: {"r": 6, "s": 170, "t": 35, "u": 13, "v": 9, "w": 14,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 7, S: 151, T: 6, U: 4, V: 2, W: 3
+[0;32mI (246115) HTTP: Data sent successfully: {"r": 7, "s": 151, "t": 6, "u": 4, "v": 2, "w": 3,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 4, S: 33, T: 4, U: 3, V: 2, W: 3
+[0;32mI (247655) HTTP: Data sent successfully: {"r": 4, "s": 33, "t": 4, "u": 3, "v": 2, "w": 3,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 1, S: 33, T: 7, U: 5, V: 3, W: 4
+[0;32mI (249195) HTTP: Data sent successfully: {"r": 1, "s": 33, "t": 7, "u": 5, "v": 3, "w": 4,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 1, S: 179, T: 41, U: 13, V: 10, W: 17
+[0;32mI (250725) HTTP: Data sent successfully: {"r": 1, "s": 179, "t": 41, "u": 13, "v": 10, "w": 17,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 6, S: 199, T: 42, U: 17, V: 11, W: 18
+[0;32mI (252255) HTTP: Data sent successfully: {"r": 6, "s": 199, "t": 42, "u": 17, "v": 11, "w": 18,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 7, S: 244, T: 47, U: 20, V: 11, W: 19
+[0;32mI (253805) HTTP: Data sent successfully: {"r": 7, "s": 244, "t": 47, "u": 20, "v": 11, "w": 19,"temperature": 30}[0m
+Temperatura del sensor: 31 °C
+R: 7, S: 245, T: 48, U: 20, V: 11, W: 19
+[0;32mI (255335) HTTP: Data sent successfully: {"r": 7, "s": 245, "t": 48, "u": 20, "v": 11, "w": 19,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 7, S: 235, T: 48, U: 19, V: 11, W: 19
+[0;32mI (256865) HTTP: Data sent successfully: {"r": 7, "s": 235, "t": 48, "u": 19, "v": 11, "w": 19,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 7, S: 239, T: 45, U: 19, V: 10, W: 18
+[0;32mI (258405) HTTP: Data sent successfully: {"r": 7, "s": 239, "t": 45, "u": 19, "v": 10, "w": 18,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 7, S: 241, T: 47, U: 19, V: 11, W: 18
+[0;32mI (259945) HTTP: Data sent successfully: {"r": 7, "s": 241, "t": 47, "u": 19, "v": 11, "w": 18,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 263, S: 3, T: 51, U: 19, V: 11, W: 17
+[0;32mI (261485) HTTP: Data sent successfully: {"r": 263, "s": 3, "t": 51, "u": 19, "v": 11, "w": 17,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 262, S: 9, T: 53, U: 19, V: 11, W: 18
+[0;32mI (263015) HTTP: Data sent successfully: {"r": 262, "s": 9, "t": 53, "u": 19, "v": 11, "w": 18,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 263, S: 8, T: 54, U: 20, V: 11, W: 18
+[0;32mI (264545) HTTP: Data sent successfully: {"r": 263, "s": 8, "t": 54, "u": 20, "v": 11, "w": 18,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 263, S: 9, T: 56, U: 21, V: 12, W: 21
+[0;32mI (266085) HTTP: Data sent successfully: {"r": 263, "s": 9, "t": 56, "u": 21, "v": 12, "w": 21,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 263, S: 21, T: 53, U: 16, V: 11, W: 26
+[0;32mI (267625) HTTP: Data sent successfully: {"r": 263, "s": 21, "t": 53, "u": 16, "v": 11, "w": 26,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 9, S: 249, T: 51, U: 19, V: 11, W: 22
+[0;32mI (269155) HTTP: Data sent successfully: {"r": 9, "s": 249, "t": 51, "u": 19, "v": 11, "w": 22,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 265, S: 45, T: 56, U: 22, V: 12, W: 22
+[0;32mI (270695) HTTP: Data sent successfully: {"r": 265, "s": 45, "t": 56, "u": 22, "v": 12, "w": 22,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 263, S: 59, T: 55, U: 23, V: 12, W: 24
+[0;32mI (272245) HTTP: Data sent successfully: {"r": 263, "s": 59, "t": 55, "u": 23, "v": 12, "w": 24,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 265, S: 37, T: 67, U: 20, V: 11, W: 26
+[0;32mI (273775) HTTP: Data sent successfully: {"r": 265, "s": 37, "t": 67, "u": 20, "v": 11, "w": 26,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 264, S: 48, T: 50, U: 17, V: 11, W: 21
+[0;32mI (275305) HTTP: Data sent successfully: {"r": 264, "s": 48, "t": 50, "u": 17, "v": 11, "w": 21,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 265, S: 10, T: 54, U: 17, V: 12, W: 26
+[0;32mI (277185) HTTP: Data sent successfully: {"r": 265, "s": 10, "t": 54, "u": 17, "v": 12, "w": 26,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 8, S: 231, T: 48, U: 16, V: 12, W: 20
+[0;32mI (279005) HTTP: Data sent successfully: {"r": 8, "s": 231, "t": 48, "u": 16, "v": 12, "w": 20,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 264, S: 17, T: 44, U: 18, V: 12, W: 23
+[0;32mI (280525) HTTP: Data sent successfully: {"r": 264, "s": 17, "t": 44, "u": 18, "v": 12, "w": 23,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 263, S: 33, T: 45, U: 18, V: 12, W: 24
+[0;32mI (282065) HTTP: Data sent successfully: {"r": 263, "s": 33, "t": 45, "u": 18, "v": 12, "w": 24,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 263, S: 37, T: 45, U: 18, V: 12, W: 24
+[0;32mI (283595) HTTP: Data sent successfully: {"r": 263, "s": 37, "t": 45, "u": 18, "v": 12, "w": 24,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 263, S: 41, T: 46, U: 18, V: 12, W: 24
+[0;32mI (285135) HTTP: Data sent successfully: {"r": 263, "s": 41, "t": 46, "u": 18, "v": 12, "w": 24,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 263, S: 46, T: 46, U: 18, V: 12, W: 25
+[0;32mI (286665) HTTP: Data sent successfully: {"r": 263, "s": 46, "t": 46, "u": 18, "v": 12, "w": 25,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 263, S: 45, T: 46, U: 18, V: 12, W: 24
+[0;32mI (288215) HTTP: Data sent successfully: {"r": 263, "s": 45, "t": 46, "u": 18, "v": 12, "w": 24,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 263, S: 45, T: 46, U: 18, V: 12, W: 24
+[0;32mI (289745) HTTP: Data sent successfully: {"r": 263, "s": 45, "t": 46, "u": 18, "v": 12, "w": 24,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 7, S: 247, T: 47, U: 16, V: 10, W: 25
+[0;32mI (291285) HTTP: Data sent successfully: {"r": 7, "s": 247, "t": 47, "u": 16, "v": 10, "w": 25,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 6, S: 41, T: 13, U: 4, V: 3, W: 5
+[0;32mI (292815) HTTP: Data sent successfully: {"r": 6, "s": 41, "t": 13, "u": 4, "v": 3, "w": 5,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 1, S: 42, T: 10, U: 4, V: 3, W: 4
+[0;32mI (294355) HTTP: Data sent successfully: {"r": 1, "s": 42, "t": 10, "u": 4, "v": 3, "w": 4,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 1, S: 162, T: 26, U: 14, V: 12, W: 20
+[0;32mI (295895) HTTP: Data sent successfully: {"r": 1, "s": 162, "t": 26, "u": 14, "v": 12, "w": 20,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 263, S: 51, T: 77, U: 30, V: 20, W: 22
+[0;32mI (297425) HTTP: Data sent successfully: {"r": 263, "s": 51, "t": 77, "u": 30, "v": 20, "w": 22,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 8, S: 234, T: 54, U: 27, V: 18, W: 17
+[0;32mI (298955) HTTP: Data sent successfully: {"r": 8, "s": 234, "t": 54, "u": 27, "v": 18, "w": 17,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 263, S: 6, T: 37, U: 17, V: 11, W: 25
+[0;32mI (300495) HTTP: Data sent successfully: {"r": 263, "s": 6, "t": 37, "u": 17, "v": 11, "w": 25,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 6, S: 249, T: 29, U: 15, V: 10, W: 20
+[0;32mI (302035) HTTP: Data sent successfully: {"r": 6, "s": 249, "t": 29, "u": 15, "v": 10, "w": 20,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 6, S: 248, T: 30, U: 15, V: 10, W: 21
+[0;32mI (303565) HTTP: Data sent successfully: {"r": 6, "s": 248, "t": 30, "u": 15, "v": 10, "w": 21,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 261, S: 20, T: 32, U: 15, V: 10, W: 21
+[0;32mI (305105) HTTP: Data sent successfully: {"r": 261, "s": 20, "t": 32, "u": 15, "v": 10, "w": 21,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 261, S: 18, T: 32, U: 15, V: 10, W: 21
+[0;32mI (309095) HTTP: Data sent successfully: {"r": 261, "s": 18, "t": 32, "u": 15, "v": 10, "w": 21,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 261, S: 22, T: 32, U: 15, V: 11, W: 21
+[0;32mI (310625) HTTP: Data sent successfully: {"r": 261, "s": 22, "t": 32, "u": 15, "v": 11, "w": 21,"temperature": 31}[0m
+Temperatura del sensor: 32 °C
+R: 261, S: 24, T: 32, U: 15, V: 11, W: 22
+[0;32mI (312165) HTTP: Data sent successfully: {"r": 261, "s": 24, "t": 32, "u": 15, "v": 11, "w": 22,"temperature": 32}[0m
+Temperatura del sensor: 31 °C
+R: 261, S: 24, T: 33, U: 16, V: 11, W: 22
+[0;32mI (313705) HTTP: Data sent successfully: {"r": 261, "s": 24, "t": 33, "u": 16, "v": 11, "w": 22,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 261, S: 25, T: 32, U: 15, V: 11, W: 22
+[0;32mI (315235) HTTP: Data sent successfully: {"r": 261, "s": 25, "t": 32, "u": 15, "v": 11, "w": 22,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 261, S: 24, T: 32, U: 15, V: 11, W: 21
+[0;32mI (316775) HTTP: Data sent successfully: {"r": 261, "s": 24, "t": 32, "u": 15, "v": 11, "w": 21,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 261, S: 24, T: 32, U: 15, V: 11, W: 22
+[0;32mI (318305) HTTP: Data sent successfully: {"r": 261, "s": 24, "t": 32, "u": 15, "v": 11, "w": 22,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 261, S: 22, T: 32, U: 15, V: 11, W: 22
+[0;32mI (319845) HTTP: Data sent successfully: {"r": 261, "s": 22, "t": 32, "u": 15, "v": 11, "w": 22,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 261, S: 23, T: 32, U: 15, V: 11, W: 21
+[0;32mI (321385) HTTP: Data sent successfully: {"r": 261, "s": 23, "t": 32, "u": 15, "v": 11, "w": 21,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 261, S: 23, T: 32, U: 15, V: 11, W: 22
+[0;32mI (322935) HTTP: Data sent successfully: {"r": 261, "s": 23, "t": 32, "u": 15, "v": 11, "w": 22,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 261, S: 25, T: 31, U: 15, V: 11, W: 22
+[0;32mI (324455) HTTP: Data sent successfully: {"r": 261, "s": 25, "t": 31, "u": 15, "v": 11, "w": 22,"temperature": 31}[0m
+Temperatura del sensor: 32 °C
+R: 261, S: 28, T: 32, U: 16, V: 11, W: 22
+[0;32mI (325985) HTTP: Data sent successfully: {"r": 261, "s": 28, "t": 32, "u": 16, "v": 11, "w": 22,"temperature": 32}[0m
+Temperatura del sensor: 31 °C
+R: 5, S: 17, T: 8, U: 5, V: 3, W: 4
+[0;32mI (327525) HTTP: Data sent successfully: {"r": 5, "s": 17, "t": 8, "u": 5, "v": 3, "w": 4,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 1, S: 43, T: 7, U: 5, V: 2, W: 4
+[0;32mI (329095) HTTP: Data sent successfully: {"r": 1, "s": 43, "t": 7, "u": 5, "v": 2, "w": 4,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 514, S: 192, T: 29, U: 25, V: 13, W: 25
+[0;32mI (330605) HTTP: Data sent successfully: {"r": 514, "s": 192, "t": 29, "u": 25, "v": 13, "w": 25,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 263, S: 26, T: 116, U: 52, V: 36, W: 44
+[0;32mI (332145) HTTP: Data sent successfully: {"r": 263, "s": 26, "t": 116, "u": 52, "v": 36, "w": 44,"temperature": 31}[0m
+Temperatura del sensor: 31 °C
+R: 265, S: 255, T: 71, U: 68, V: 31, W: 37
+[0;32mI (333685) HTTP: Data sent successfully: {"r": 265, "s": 255, "t": 71, "u": 68, "v": 31, "w": 37,"temperature": 31}[0m
+Temperatura del sensor: 30 °C
+R: 519, S: 99, T: 60, U: 61, V: 27, W: 32
+[0;32mI (335215) HTTP: Data sent successfully: {"r": 519, "s": 99, "t": 60, "u": 61, "v": 27, "w": 32,"temperature": 30}[0m
+Temperatura del sensor: 30 °C
+R: 8, S: 48, T: 2, U: 2, V: 1, W: 2
+[0;32mI (336745) HTTP: Data sent successfully: {"r": 8, "s": 48, "t": 2, "u": 2, "v": 1, "w": 2,"temperature": 30}[0m
